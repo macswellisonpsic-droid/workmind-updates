@@ -1,95 +1,611 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WorkMind PSI | Atualização</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WorkMind PSI | Download Oficial</title>
+
+  <meta name="description" content="Baixe a versão oficial da WorkMind PSI, plataforma premium para gestão clínica, organização de pacientes, documentos, triagem e acompanhamento psicológico." />
+
   <style>
+    :root {
+      --slate-950: #020617;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --indigo: #4f46e5;
+      --indigo-dark: #3730a3;
+      --violet: #7c3aed;
+      --emerald: #059669;
+      --amber: #f59e0b;
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --shadow-soft: 0 24px 80px rgba(15, 23, 42, .18);
+      --shadow-strong: 0 34px 100px rgba(2, 6, 23, .38);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #312e81);
-      color: #0f172a;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--slate-900);
+      background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, .35), transparent 34%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, .22), transparent 32%),
+        linear-gradient(135deg, #020617 0%, #111827 46%, #312e81 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      min-height: 82px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 24px;
+      justify-content: space-between;
+      gap: 18px;
+      color: white;
     }
 
-    .card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 36px;
-      box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
-      text-align: center;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: 13px;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #4338ca;
-      font-size: 12px;
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--indigo), var(--violet));
+      box-shadow: 0 16px 38px rgba(79, 70, 229, .35);
+      color: white;
+      letter-spacing: 0;
+      font-size: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,.78);
+      font-size: 13px;
       font-weight: 800;
+      padding: 10px 12px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,.1);
+      color: white;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      gap: 28px;
+      align-items: center;
+      padding: 34px 0 42px;
+    }
+
+    .hero-copy {
+      color: white;
+      padding: 22px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      color: #c7d2fe;
+      font-size: 12px;
+      font-weight: 900;
       letter-spacing: .14em;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 38px;
-      letter-spacing: -1px;
+    .hero h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: .94;
+      letter-spacing: -.07em;
     }
 
-    p {
-      color: #475569;
-      line-height: 1.7;
-      font-size: 16px;
+    .hero p {
+      margin: 20px 0 0;
+      max-width: 660px;
+      color: rgba(255,255,255,.76);
+      line-height: 1.75;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 16px 24px;
-      border-radius: 16px;
-      background: #4f46e5;
-      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 15px 20px;
+      border-radius: 17px;
+      border: 0;
       text-decoration: none;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--indigo), var(--violet));
+      color: white;
+      box-shadow: 0 18px 42px rgba(79, 70, 229, .35);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .download-card {
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 34px;
+      padding: 26px;
+      box-shadow: var(--shadow-strong);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--indigo), var(--violet), var(--indigo));
+    }
+
+    .download-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: #eef2ff;
+      color: var(--indigo-dark);
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .download-card h2 {
+      margin: 0 0 10px;
+      font-size: 29px;
+      letter-spacing: -.04em;
+    }
+
+    .download-card p {
+      margin: 0;
+      color: var(--slate-600);
+      line-height: 1.65;
+    }
+
+    .version-box {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0;
+      padding: 16px;
+      border-radius: 20px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+    }
+
+    .version-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--slate-600);
+      font-size: 13px;
       font-weight: 800;
     }
 
-    .info {
-      margin-top: 22px;
-      padding: 16px;
-      background: #f8fafc;
-      border-radius: 16px;
-      color: #64748b;
+    .version-row strong {
+      color: var(--slate-900);
+    }
+
+    .btn-download {
+      width: 100%;
+      min-height: 58px;
+      font-size: 16px;
+    }
+
+    .security-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--slate-500);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .section {
+      background: rgba(255,255,255,.96);
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,.55);
+      margin: 0 0 28px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -.06em;
+      color: var(--slate-950);
+    }
+
+    .section > p {
+      margin: 0;
+      color: var(--slate-600);
+      line-height: 1.75;
+      max-width: 820px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      border: 1px solid var(--slate-200);
+      border-radius: 24px;
+      padding: 20px;
+      background: white;
+    }
+
+    .feature span {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #eef2ff;
+      color: var(--indigo-dark);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--slate-600);
+      line-height: 1.6;
       font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+      counter-reset: step;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid var(--slate-200);
+      background: white;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--indigo), var(--violet));
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 14px 30px rgba(79, 70, 229, .24);
+    }
+
+    .step h3 {
+      margin: 2px 0 6px;
+      font-size: 17px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--slate-600);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .warning {
+      margin-top: 20px;
+      border: 1px solid #fde68a;
+      background: #fffbeb;
+      color: #92400e;
+      border-radius: 22px;
+      padding: 16px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .footer {
+      color: rgba(255,255,255,.68);
+      text-align: center;
+      padding: 22px 0 40px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0 4px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 22px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 24px;
+        border-radius: 28px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <main class="card">
-    <div class="badge">WorkMind PSI</div>
+  <div class="page">
+    <header class="nav">
+      <div class="brand">
+        <div class="brand-mark">WM</div>
+        WorkMind PSI
+      </div>
 
-    <h1>Atualização disponível</h1>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#download">Download</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#instalacao">Instalação</a>
+        <a href="#suporte">Suporte</a>
+      </nav>
+    </header>
 
-    <p>
-      Baixe a versão mais recente do WorkMind PSI pelo botão abaixo.
-      Após baixar, feche o sistema e execute o instalador.
-    </p>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Download oficial</div>
 
-    <a class="btn" href="https://github.com/macswellisonpsic-droid/workmind-updates/releases/download/v4.3.0/WorkMindPSI_4.3.0_PRO_PREMIUM.exe">
-      Baixar atualização
-    </a>
+        <h1>WorkMind PSI para gestão clínica profissional.</h1>
 
-    <div class="info">
-      Versão atual disponível: 4.3.0
-    </div>
-  </main>
+        <p>
+          Baixe a versão oficial da WorkMind PSI, uma plataforma criada para psicólogos que precisam organizar pacientes, documentos, triagens, recursos clínicos e acompanhamento com mais clareza, segurança e elegância.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download">Baixar agora</a>
+          <a class="btn btn-secondary" href="#instalacao">Ver instruções</a>
+        </div>
+      </div>
+
+      <aside class="download-card" id="download">
+        <div class="download-icon">↓</div>
+
+        <h2>Instalador oficial</h2>
+
+        <p>
+          Recomendado para novos usuários e também para quem precisa reinstalar a ferramenta.
+        </p>
+
+        <div class="version-box">
+          <div class="version-row">
+            <span>Produto</span>
+            <strong>WorkMind PSI</strong>
+          </div>
+
+          <div class="version-row">
+            <span>Versão</span>
+            <strong>4.3.0</strong>
+          </div>
+
+          <div class="version-row">
+            <span>Sistema</span>
+            <strong>Windows</strong>
+          </div>
+        </div>
+
+        <a class="btn btn-primary btn-download" href="https://github.com/macswellisonpsic-droid/workmind-updates/releases/latest/download/WorkMindPSI_Setup.exe">
+          Baixar WorkMind PSI
+        </a>
+
+        <div class="security-note">
+          Baixe apenas por esta página oficial. Após o download, execute o instalador e siga as etapas na tela.
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="recursos">
+      <h2>Uma experiência premium para a rotina clínica.</h2>
+
+      <p>
+        A WorkMind PSI reúne recursos essenciais para facilitar a organização do atendimento psicológico, reduzir retrabalho e deixar o acompanhamento mais claro para o profissional.
+      </p>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <span>01</span>
+          <h3>Gestão de pacientes</h3>
+          <p>Organize informações clínicas, dados de contato, histórico e acompanhamento em um ambiente estruturado.</p>
+        </article>
+
+        <article class="feature">
+          <span>02</span>
+          <h3>Documentos e contratos</h3>
+          <p>Gere documentos clínicos, contratos e materiais com visual profissional e identidade consistente.</p>
+        </article>
+
+        <article class="feature">
+          <span>03</span>
+          <h3>Triagem e portal</h3>
+          <p>Use fluxos digitais para coletar informações, orientar pacientes e receber arquivos de acompanhamento.</p>
+        </article>
+
+        <article class="feature">
+          <span>04</span>
+          <h3>Recursos clínicos</h3>
+          <p>Conte com questionários, entrevistas, checklists e instrumentos de apoio organizados por finalidade.</p>
+        </article>
+
+        <article class="feature">
+          <span>05</span>
+          <h3>Comunicação</h3>
+          <p>Envie mensagens com modelos prontos, organize orientações e facilite o contato com pacientes.</p>
+        </article>
+
+        <article class="feature">
+          <span>06</span>
+          <h3>Rotina mais fluida</h3>
+          <p>Centralize tarefas e informações importantes para tornar a prática clínica mais objetiva e produtiva.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="instalacao">
+      <h2>Como instalar pela primeira vez.</h2>
+
+      <p>
+        Siga este passo a passo para instalar a WorkMind PSI com segurança no computador.
+      </p>
+
+      <div class="steps">
+        <article class="step">
+          <div>
+            <h3>Baixe o instalador</h3>
+            <p>Clique no botão “Baixar WorkMind PSI” e aguarde o download do arquivo de instalação.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div>
+            <h3>Execute o arquivo baixado</h3>
+            <p>Abra o instalador no Windows. Se aparecer um aviso de segurança, confirme que deseja executar o arquivo baixado da página oficial.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div>
+            <h3>Finalize a instalação</h3>
+            <p>Siga as etapas do instalador até concluir. Depois, abra a WorkMind PSI pelo atalho criado no computador.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div>
+            <h3>Ative sua licença</h3>
+            <p>Na primeira abertura, informe sua licença de acesso, quando solicitado, para liberar o uso da ferramenta.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="warning">
+        Se você já usa a WorkMind PSI, feche o sistema antes de instalar uma nova versão. Isso evita conflitos durante a atualização.
+      </div>
+    </section>
+
+    <section class="section" id="suporte">
+      <h2>Suporte e orientações.</h2>
+
+      <p>
+        Em caso de dúvida na instalação, licença ou atualização, entre em contato com o suporte oficial da WorkMind Global. Informe seu nome, e-mail de ativação e uma breve descrição do problema.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:workmindglobal@gmail.com?subject=Suporte%20WorkMind%20PSI">
+          Falar com suporte
+        </a>
+
+        <a class="btn btn-secondary" href="#download">
+          Voltar ao download
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      WorkMind PSI, uma solução WorkMind Global.<br />
+      © 2026 WorkMind Global. Todos os direitos reservados.
+    </footer>
+  </div>
 </body>
 </html>
