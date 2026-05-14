@@ -906,13 +906,33 @@
       color: var(--slate-700);
     }
 
-    .footer {
-      color: rgba(255,255,255,.68);
-      text-align: center;
-      padding: 22px 0 40px;
-      font-size: 13px;
-      line-height: 1.6;
-    }
+.footer {
+  color: rgba(255,255,255,.68);
+  text-align: center;
+  padding: 22px 0 40px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.footer-legal-links a {
+  color: rgba(255,255,255,.88);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
     @media (max-width: 1080px) {
       .checkout-shell {
@@ -1017,6 +1037,8 @@
         <a href="#versoes">Versões</a>
         <a href="#instalacao">Instalação</a>
         <a href="#suporte">Suporte</a>
+	<a href="politica-de-privacidade.html">Privacidade</a>
+	<a href="termos-de-uso.html">Termos</a>
       </nav>
     </header>
 
@@ -1507,6 +1529,7 @@
       </p>
 
       <div class="actions">
+
         <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=workmindglobal@gmail.com&su=Suporte%20WorkMind%20PSI&body=Ol%C3%A1,%20preciso%20de%20suporte%20com%20a%20WorkMind%20PSI.%0A%0AMeu%20nome:%20%0AE-mail%20de%20ativa%C3%A7%C3%A3o:%20%0AVers%C3%A3o%20instalada:%20%0AHWID:%20%0ADescreva%20o%20problema:%20%0A%0AObrigado.">
           Falar com suporte
         </a>
@@ -1517,10 +1540,16 @@
       </div>
     </section>
 
-    <footer class="footer">
-      WorkMind PSI, uma solução WorkMind Global.<br />
-      © 2026 WorkMind Global. Todos os direitos reservados.
-    </footer>
+<footer class="footer">
+  WorkMind PSI, uma solução WorkMind Global.<br />
+  © 2026 WorkMind Global. Todos os direitos reservados.
+
+  <div class="footer-legal-links">
+    <a href="politica-de-privacidade.html">Política de Privacidade</a>
+    <span>•</span>
+    <a href="termos-de-uso.html">Termos de Uso</a>
+  </div>
+</footer>
   </div>
 
   <script>
