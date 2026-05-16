@@ -1299,7 +1299,7 @@
 
           <div class="checkout-step" data-step="4">
 	<h3>Dados para ativação</h3>
-	<p>Esses dados serão usados para gerar sua licença automaticamente após o pagamento.</p>
+	<p>Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.</p>
 
             <form id="license-form">
               <div class="form-grid">
@@ -1323,10 +1323,15 @@
                   <input id="form-crp" name="crp" type="text" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="CRP 00/00000">
                 </div>
 
-                <div class="field">
-                  <label for="form-hwid">HWID, se já tiver</label>
-                  <input id="form-hwid" name="hwid" type="text" placeholder="Cole aqui o HWID exibido na ferramenta">
-                </div>
+<div class="field">
+  <label for="form-hwid">HWID da WorkMind PSI</label>
+  <input id="form-hwid" name="hwid" type="text" required placeholder="Cole aqui o HWID exibido na ferramenta">
+</div>
+
+<div class="field">
+  <label for="form-coupon">Cupom, se tiver</label>
+  <input id="form-coupon" name="cupom" type="text" autocomplete="off" placeholder="Exemplo: BETA10">
+</div>
 
 <div class="field">
   <label for="form-payment">Forma de finalização</label>
@@ -1923,13 +1928,15 @@ if (licenseForm) {
       }
 
       const payload = {
-        nome: getValue("form-name"),
-        email: getValue("form-email"),
-        whatsapp: getValue("form-phone"),
-        crp: getValue("form-crp"),
-        hwid: getValue("form-hwid"),
-        plano: state.plan.id
-      };
+const payload = {
+  nome: getValue("form-name"),
+  email: getValue("form-email"),
+  whatsapp: getValue("form-phone"),
+  crp: getValue("form-crp"),
+  hwid: getValue("form-hwid"),
+  cupom: getValue("form-coupon"),
+  plano: state.plan.id
+};
 
       if (!payload.hwid || payload.hwid.length < 3) {
         alert("Informe o HWID exibido na WorkMind PSI antes de continuar.");
