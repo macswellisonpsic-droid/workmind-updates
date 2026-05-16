@@ -1225,9 +1225,9 @@
 
     <section class="section" id="licenca">
       <h2>Solicitação de licença.</h2>
-      <p>
-        Siga o fluxo abaixo para escolher condição, perfil, plano, conferir o resumo do pedido e abrir o e-mail de solicitação já preenchido.
-      </p>
+<p>
+  Escolha seu plano, preencha os dados de ativação e finalize a compra com segurança pelo Mercado Pago. Após a confirmação do pagamento, sua licença será gerada automaticamente.
+</p>
 
       <div class="checkout-shell">
         <div class="checkout-panel">
@@ -1298,8 +1298,8 @@
           </div>
 
           <div class="checkout-step" data-step="4">
-            <h3>Dados para solicitação</h3>
-            <p>Esses dados serão enviados no e-mail de solicitação da licença.</p>
+	<h3>Dados para ativação</h3>
+	<p>Esses dados serão usados para gerar sua licença automaticamente após o pagamento.</p>
 
             <form id="license-form">
               <div class="form-grid">
@@ -1328,17 +1328,13 @@
                   <input id="form-hwid" name="hwid" type="text" placeholder="Cole aqui o HWID exibido na ferramenta">
                 </div>
 
-                <div class="field">
-                  <label for="form-payment">Status do pagamento</label>
-                  <select id="form-payment" name="pagamento" required>
-                    <option value="">Selecione</option>
-                    <option>Ainda não paguei</option>
-                    <option>Já paguei via Pix e vou anexar o comprovante</option>
-                    <option>Desejo licença teste</option>
-                    <option>Quero orientação antes de pagar</option>
-                    <option>Não se aplica</option>
-                  </select>
-                </div>
+<div class="field">
+  <label for="form-payment">Forma de finalização</label>
+  <select id="form-payment" name="pagamento">
+    <option value="mercado-pago" selected>Pagamento online pelo Mercado Pago</option>
+    <option value="manual">Preciso de orientação manual</option>
+  </select>
+</div>
 
                 <div class="field full">
                   <label for="form-message">Observações</label>
@@ -1346,24 +1342,25 @@
                 </div>
               </div>
 
-              <div class="pix-area" id="pix-area">
-                <h3>Pagamento via Pix</h3>
-                <p>Use a chave abaixo e anexe o comprovante ao e-mail que será aberto na finalização.</p>
-                <div class="pix-key">
-                  <span id="pix-key">workmindglobal@gmail.com</span>
-                  <button class="mini-btn" type="button" id="copy-pix">Copiar</button>
-                </div>
-              </div>
+<div class="pix-area visible" id="pix-area">
+  <h3>Pagamento seguro</h3>
+  <p>
+    Ao finalizar, você será direcionado ao Mercado Pago. Após a aprovação, a licença será gerada automaticamente na página de confirmação.
+  </p>
+  <div class="pix-key">
+    <span>Pix, cartão ou métodos disponíveis pelo Mercado Pago</span>
+  </div>
+</div>
 
               <div class="notice">
-                O envio será feito pelo seu e-mail. O site abrirá uma mensagem pronta para workmindglobal@gmail.com. Se já tiver pago via Pix, anexe o comprovante antes de enviar.
-              </div>
+  Importante: informe o HWID corretamente. A licença será vinculada ao e-mail e ao HWID preenchidos neste formulário.
+</div>
 
-              <div class="actions">
-                <button class="btn btn-outline" type="button" data-back-step="3">Voltar</button>
-                <button class="btn btn-primary" type="submit">Abrir e-mail com solicitação</button>
-                <button class="btn btn-outline" type="button" id="copy-license-request">Copiar solicitação</button>
-              </div>
+<div class="actions">
+  <button class="btn btn-outline" type="button" data-back-step="3">Voltar</button>
+  <button class="btn btn-primary" type="submit" id="checkout-submit-btn">Comprar licença agora</button>
+  <button class="btn btn-outline" type="button" id="copy-license-request">Copiar dados da solicitação</button>
+</div>
             </form>
           </div>
         </div>
@@ -1555,6 +1552,7 @@
   <script>
     const WORKMIND_DOWNLOAD_URL = "https://github.com/macswellisonpsic-droid/workmind-updates/releases/latest/download/WorkMindPSI_Setup.exe";
     const SUPPORT_EMAIL = "workmindglobal@gmail.com";
+    const WORKMIND_LICENSE_API = "https://workmind-license-api.vercel.app";
 
     const plans = [
       { id: "teste", profile: "teste", name: "Licença Teste", tag: "Teste", duration: "Avaliação", normal: 0, beta: 0, description: "Para conhecer a ferramenta antes da contratação.", paid: false },
@@ -1769,18 +1767,14 @@
     const paymentSelect = document.getElementById("form-payment");
     const pixArea = document.getElementById("pix-area");
 
-    function syncPixVisibility() {
-      if (!paymentSelect || !pixArea) return;
+function syncPixVisibility() {
+  if (!paymentSelect || !pixArea) return;
 
-      const value = String(paymentSelect.value || "").toLowerCase();
-      const hasPaidOrWillPay =
-        value.includes("já paguei") ||
-        value.includes("ainda não paguei") ||
-        value.includes("antes de pagar");
+  const value = String(paymentSelect.value || "").toLowerCase();
+  const shouldShow = value !== "manual";
 
-      const shouldShow = !!(state.plan && state.plan.paid && hasPaidOrWillPay);
-      pixArea.classList.toggle("visible", shouldShow);
-    }
+  pixArea.classList.toggle("visible", shouldShow);
+}
 
     if (paymentSelect) {
       paymentSelect.addEventListener("change", syncPixVisibility);
@@ -1861,7 +1855,7 @@ function applyInputMasks() {
     function getLicenseRequestText() {
       const plan = state.plan;
       return [
-        "Olá, desejo solicitar uma licença da WorkMind PSI.",
+        "Olá, desejo suporte para uma licença da WorkMind PSI.",
         "",
         "Condição: " + modeLabel(),
         "Perfil: " + (state.profile || "Não selecionado"),
@@ -1879,44 +1873,97 @@ function applyInputMasks() {
         "Observações:",
         getValue("form-message") || "Sem observações adicionais.",
         "",
-        "Chave Pix informada: workmindglobal@gmail.com",
-        "Se já realizei o pagamento, anexarei o comprovante neste e-mail.",
-        "",
-        "Aguardo as orientações para validação, licença e ativação."
+	"Finalização preferencial: Mercado Pago",
+	"",
+       "Aguardo orientações do suporte, caso a ativação automática não seja concluída."
       ].join("\n");
     }
 
     const licenseForm = document.getElementById("license-form");
-    if (licenseForm) {
-      licenseForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+if (licenseForm) {
+  licenseForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
 
-        if (!state.profile) {
-          alert("Escolha o tipo de acesso antes de finalizar.");
-          setStep(2);
-          return;
-        }
-
-        if (!state.plan) {
-          alert("Escolha um plano antes de finalizar.");
-          setStep(3);
-          return;
-        }
-
-        if (!licenseForm.reportValidity()) return;
-
-        const subject = "Solicitação de licença WorkMind PSI";
-        const body = getLicenseRequestText();
-
-        const gmailUrl =
-          "https://mail.google.com/mail/?view=cm&fs=1" +
-          "&to=" + encodeURIComponent(SUPPORT_EMAIL) +
-          "&su=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-
-        window.open(gmailUrl, "_blank", "noopener,noreferrer");
-      });
+    if (!state.profile) {
+      alert("Escolha o tipo de acesso antes de finalizar.");
+      setStep(2);
+      return;
     }
+
+    if (!state.plan) {
+      alert("Escolha um plano antes de finalizar.");
+      setStep(3);
+      return;
+    }
+
+    if (!licenseForm.reportValidity()) return;
+
+    const paymentMode = getValue("form-payment");
+
+    if (paymentMode === "manual" || !state.plan.paid || state.profile === "teste" || state.profile === "enterprise") {
+      const subject = "Solicitação de licença WorkMind PSI";
+      const body = getLicenseRequestText();
+
+      const gmailUrl =
+        "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + encodeURIComponent(SUPPORT_EMAIL) +
+        "&su=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.open(gmailUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    const checkoutButton = document.getElementById("checkout-submit-btn");
+
+    try {
+      if (checkoutButton) {
+        checkoutButton.disabled = true;
+        checkoutButton.textContent = "Gerando pagamento...";
+      }
+
+      const payload = {
+        nome: getValue("form-name"),
+        email: getValue("form-email"),
+        whatsapp: getValue("form-phone"),
+        crp: getValue("form-crp"),
+        hwid: getValue("form-hwid"),
+        plano: state.plan.id
+      };
+
+      if (!payload.hwid || payload.hwid.length < 3) {
+        alert("Informe o HWID exibido na WorkMind PSI antes de continuar.");
+        return;
+      }
+
+      const response = await fetch(WORKMIND_LICENSE_API + "/api/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success || !data.paymentUrl) {
+        console.error("Erro no checkout:", data);
+        alert(data.error || "Não foi possível gerar o pagamento. Tente novamente ou solicite suporte manual.");
+        return;
+      }
+
+      window.location.href = data.paymentUrl;
+    } catch (err) {
+      console.error("Erro ao iniciar pagamento:", err);
+      alert("Erro ao iniciar pagamento. Verifique sua conexão ou tente solicitar suporte manual.");
+    } finally {
+      if (checkoutButton) {
+        checkoutButton.disabled = false;
+        checkoutButton.textContent = "Comprar licença agora";
+      }
+    }
+  });
+}
 
     const copyPixButton = document.getElementById("copy-pix");
     if (copyPixButton) {
