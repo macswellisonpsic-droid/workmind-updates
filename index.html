@@ -1260,6 +1260,10 @@
                 <p>Para clínicas com mais de um psicólogo ou equipes em expansão.</p>
               </button>
 
+              <button class="choice-card" type="button" data-profile="teste">
+                <h3>Teste gratuito de 7 dias</h3>
+                <p>Solicite uma licença demonstrativa, liberada mediante análise e vinculada ao e-mail e HWID informado.</p>
+              </button>
 
               <button class="choice-card" type="button" data-profile="enterprise">
                 <h3>Enterprise ou sob consulta</h3>
@@ -1546,6 +1550,7 @@
     const WORKMIND_LICENSE_API = "https://workmind-license-api.vercel.app";
 
     const plans = [
+      { id: "teste_gratis_7_dias", profile: "teste", name: "Teste gratuito WorkMind PSI", tag: "7 dias", duration: "7 dias", normal: 0, description: "Licença demonstrativa gratuita, liberada mediante análise, vinculada ao e-mail e ao HWID informado.", paid: false },
       { id: "mensal", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Mensal", duration: "30 dias", normal: 97, description: "Plano mensal para profissional individual.", paid: true },
       { id: "bimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Bimestral", duration: "60 dias", normal: 182, description: "Plano de 60 dias para continuidade com menor compromisso inicial.", paid: true },
       { id: "trimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Trimestral", duration: "90 dias", normal: 267, description: "Plano trimestral para uso contínuo com melhor organização.", paid: true },
@@ -1630,6 +1635,7 @@
       const profileMap = {
         profissional: "Profissional individual",
         clinica: "Clínica ou equipe",
+        teste: "Teste gratuito de 7 dias",
         enterprise: "Enterprise ou sob consulta"
       };
 
@@ -1677,6 +1683,9 @@
 
       let filtered = plans.filter(p => p.profile === state.profile);
 
+      if (state.profile === "teste") {
+        filtered = plans.filter(p => p.profile === "teste");
+      }
 
       if (state.profile === "enterprise") {
         filtered = plans.filter(p => p.profile === "enterprise");
@@ -1858,7 +1867,7 @@ function applyInputMasks() {
         "Observações:",
         getValue("form-message") || "Sem observações adicionais.",
         "",
-	"Finalização preferencial: Mercado Pago",
+	"Finalização preferencial: " + (state.profile === "teste" ? "Teste gratuito de 7 dias" : "Mercado Pago"),
 	"",
        "Aguardo orientações do suporte, caso a ativação automática não seja concluída."
       ].join("\n");
@@ -1885,8 +1894,8 @@ if (licenseForm) {
 
     const paymentMode = getValue("form-payment");
 
-    if (paymentMode === "manual" || !state.plan.paid || state.profile === "enterprise") {
-      const subject = "Solicitação de licença WorkMind PSI";
+    if (paymentMode === "manual" || !state.plan.paid || state.profile === "teste" || state.profile === "enterprise") {
+      const subject = state.profile === "teste" ? "Solicitação de teste gratuito WorkMind PSI" : "Solicitação de licença WorkMind PSI";
       const body = getLicenseRequestText();
 
       const gmailUrl =
