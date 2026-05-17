@@ -1196,23 +1196,18 @@
     <section class="section" id="planos">
       <h2>Planos e licenças.</h2>
       <p>
-        Selecione primeiro se deseja visualizar valores normais ou valores do Programa Beta. Depois, escolha entre planos para profissionais ou clínicas.
+        Consulte os planos disponíveis e escolha entre opções para profissionais ou clínicas.
       </p>
 
       <div class="license-mode-switch">
         <button class="mode-option active" type="button" data-price-mode="normal">
-          <h3>Valores normais</h3>
-          <p>Para novas contratações, renovações comuns e usuários que não participam do Programa Beta.</p>
-        </button>
-
-        <button class="mode-option" type="button" data-price-mode="beta">
-          <h3>Programa Beta</h3>
-          <p>Para participantes Beta, exibindo apenas os valores promocionais com desconto.</p>
+          <h3>Planos disponíveis</h3>
+          <p>Valores oficiais para novas contratações, renovações e usuários que desejam ativar a WorkMind PSI.</p>
         </button>
       </div>
 
       <div class="mode-card" id="plans-mode-note">
-        <strong>Valores normais:</strong> Os cards abaixo exibem os preços beta e normais, confome seleção.
+        <strong>Valores oficiais:</strong> os cards abaixo exibem os planos disponíveis para contratação.
       </div>
 
       <div class="plans-tabs">
@@ -1232,25 +1227,20 @@
       <div class="checkout-shell">
         <div class="checkout-panel">
           <div class="stepper">
-            <div class="step-pill active" data-step-indicator="1">1. Condição</div>
+            <div class="step-pill active" data-step-indicator="1">1. Contratação</div>
             <div class="step-pill" data-step-indicator="2">2. Perfil</div>
             <div class="step-pill" data-step-indicator="3">3. Plano</div>
             <div class="step-pill" data-step-indicator="4">4. Dados</div>
           </div>
 
           <div class="checkout-step active" data-step="1">
-            <h3>Escolha a condição de contratação</h3>
-            <p>Isso define se serão mostrados valores normais ou valores do Programa Beta.</p>
+            <h3>Confirme a contratação</h3>
+            <p>Esta etapa confirma que a compra será realizada pelos planos oficiais disponíveis.</p>
 
             <div class="choice-grid">
               <button class="choice-card active" type="button" data-checkout-mode="normal">
-                <h3>Comprar licença, valor normal</h3>
-                <p>Para novas contratações e usuários que não participam do Programa Beta.</p>
-              </button>
-
-              <button class="choice-card" type="button" data-checkout-mode="beta">
-                <h3>Sou participante do Programa Beta</h3>
-                <p>Para participantes Beta, com exibição apenas dos valores promocionais.</p>
+                <h3>Comprar licença</h3>
+                <p>Para novas contratações, renovações e ativações oficiais da WorkMind PSI.</p>
               </button>
             </div>
           </div>
@@ -1329,8 +1319,8 @@
 </div>
 
 <div class="field">
-  <label for="form-coupon">Cupom, se tiver</label>
-  <input id="form-coupon" name="cupom" type="text" autocomplete="off" placeholder="Exemplo: BETA10">
+  <label for="form-coupon">Cupom de desconto, se houver</label>
+  <input id="form-coupon" name="cupom" type="text" autocomplete="off" placeholder="Insira seu cupom de desconto">
 </div>
 
 <div class="field">
@@ -1350,7 +1340,7 @@
 <div class="pix-area visible" id="pix-area">
   <h3>Pagamento seguro</h3>
   <p>
-    Ao finalizar, você será direcionado ao Mercado Pago. Após a aprovação, a licença será gerada automaticamente na página de confirmação.
+    Ao finalizar, você será direcionado ao Mercado Pago. Após a aprovação, a licença será gerada e enviada automaticamente por e-mail.
   </p>
   <div class="pix-key">
     <span>Pix, cartão ou métodos disponíveis pelo Mercado Pago</span>
@@ -1374,8 +1364,8 @@
           <h3>Resumo do pedido</h3>
 
           <div class="summary-line">
-            <span>Condição</span>
-            <strong id="summary-mode">Valores normais</strong>
+            <span>Contratação</span>
+            <strong id="summary-mode">Contratação oficial</strong>
           </div>
 
           <div class="summary-line">
@@ -1560,17 +1550,17 @@
     const WORKMIND_LICENSE_API = "https://workmind-license-api.vercel.app";
 
     const plans = [
-      { id: "teste", profile: "teste", name: "Licença Teste", tag: "Teste", duration: "Avaliação", normal: 0, beta: 0, description: "Para conhecer a ferramenta antes da contratação.", paid: false },
-      { id: "mensal", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Mensal", duration: "30 dias", normal: 97, beta: 87.30, description: "Plano mensal para profissional individual.", paid: true },
-      { id: "bimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Bimestral", duration: "60 dias", normal: 182, beta: 163.80, description: "Plano de 60 dias para continuidade com menor compromisso inicial.", paid: true },
-      { id: "trimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Trimestral", duration: "90 dias", normal: 267, beta: 240.30, description: "Plano trimestral para uso contínuo com melhor organização.", paid: true },
-      { id: "quadrimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Quadrimestral", duration: "120 dias", normal: 348, beta: 313.20, description: "Plano de 120 dias para mais estabilidade entre renovações.", paid: true },
-      { id: "semestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Semestral", duration: "6 meses", normal: 510, beta: 459.00, description: "Plano semestral para profissionais que desejam uso prolongado.", paid: true },
-      { id: "anual", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Anual", duration: "12 meses", normal: 948, beta: 853.20, description: "Plano anual recomendado para uso contínuo.", paid: true },
-      { id: "standard", profile: "clinica", name: "Standard", tag: "Até 2 psicólogos", duration: "Anual", normal: 1597, beta: 1437.30, description: "Plano para clínicas pequenas ou equipes iniciais.", paid: true },
-      { id: "profissional-clinica", profile: "clinica", name: "Profissional", tag: "Até 4 psicólogos", duration: "Anual", normal: 2997, beta: 2697.30, description: "Plano para clínicas em crescimento.", paid: true },
-      { id: "premium-clinica", profile: "clinica", name: "Premium", tag: "Até 6 psicólogos", duration: "Anual", normal: 4197, beta: 3777.30, description: "Plano para clínicas com maior volume de profissionais.", paid: true },
-      { id: "enterprise", profile: "enterprise", name: "Enterprise", tag: "Sob consulta", duration: "Personalizado", normal: null, beta: null, description: "Para clínicas com mais de 6 psicólogos ou necessidades específicas.", paid: false }
+      { id: "teste_pagamento", profile: "teste", name: "Teste de pagamento", tag: "Teste R$ 1", duration: "7 dias", normal: 1, description: "Plano temporário para validar o fluxo automático de pagamento e licença.", paid: true },
+      { id: "mensal", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Mensal", duration: "30 dias", normal: 97, description: "Plano mensal para profissional individual.", paid: true },
+      { id: "bimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Bimestral", duration: "60 dias", normal: 182, description: "Plano de 60 dias para continuidade com menor compromisso inicial.", paid: true },
+      { id: "trimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Trimestral", duration: "90 dias", normal: 267, description: "Plano trimestral para uso contínuo com melhor organização.", paid: true },
+      { id: "quadrimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Quadrimestral", duration: "120 dias", normal: 348, description: "Plano de 120 dias para mais estabilidade entre renovações.", paid: true },
+      { id: "semestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Semestral", duration: "6 meses", normal: 510, description: "Plano semestral para profissionais que desejam uso prolongado.", paid: true },
+      { id: "anual", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Anual", duration: "12 meses", normal: 948, description: "Plano anual recomendado para uso contínuo.", paid: true },
+      { id: "standard", profile: "clinica", name: "Standard", tag: "Até 2 psicólogos", duration: "Anual", normal: 1597, description: "Plano para clínicas pequenas ou equipes iniciais.", paid: true },
+      { id: "profissional-clinica", profile: "clinica", name: "Profissional", tag: "Até 4 psicólogos", duration: "Anual", normal: 2997, description: "Plano para clínicas em crescimento.", paid: true },
+      { id: "premium-clinica", profile: "clinica", name: "Premium", tag: "Até 6 psicólogos", duration: "Anual", normal: 4197, description: "Plano para clínicas com maior volume de profissionais.", paid: true },
+      { id: "enterprise", profile: "enterprise", name: "Enterprise", tag: "Sob consulta", duration: "Personalizado", normal: null, description: "Para clínicas com mais de 6 psicólogos ou necessidades específicas.", paid: false }
     ];
 
     const state = {
@@ -1589,15 +1579,15 @@
 
     function currentPrice(plan) {
       if (!plan) return 0;
-      return state.priceMode === "beta" ? plan.beta : plan.normal;
+      return plan.normal;
     }
 
     function modeLabel() {
-      return state.priceMode === "beta" ? "Programa Beta" : "Valores normais";
+      return "Contratação oficial";
     }
 
     function setPriceMode(mode) {
-      state.priceMode = mode;
+      state.priceMode = "normal";
       state.plan = null;
 
       document.querySelectorAll("[data-price-mode]").forEach(function(btn) {
@@ -1610,9 +1600,7 @@
 
       const note = document.getElementById("plans-mode-note");
       if (note) {
-        note.innerHTML = state.priceMode === "beta"
-          ? "<strong>Programa Beta:</strong> os cards abaixo exibem apenas os valores promocionais Beta."
-          : "<strong>Valores normais:</strong> os cards abaixo exibem os preços oficiais sem desconto Beta.";
+        note.innerHTML = "<strong>Valores oficiais:</strong> os cards abaixo exibem os planos disponíveis para contratação.";
       }
 
      applyInputMasks();
@@ -1660,7 +1648,7 @@
 
     function planCard(plan, forCheckout) {
       const price = currentPrice(plan);
-      const betaChip = state.priceMode === "beta" && price !== null && Number(price) > 0 ? '<span class="beta-chip">Beta</span>' : "";
+      const betaChip = "";
       const dataAttr = forCheckout ? ' data-plan-id="' + plan.id + '"' : "";
       const asButtonAttrs = forCheckout ? ' role="button" tabindex="0"' : "";
       return `
@@ -1862,7 +1850,7 @@ function applyInputMasks() {
       return [
         "Olá, desejo suporte para uma licença da WorkMind PSI.",
         "",
-        "Condição: " + modeLabel(),
+        "Contratação: " + modeLabel(),
         "Perfil: " + (state.profile || "Não selecionado"),
         "Plano: " + (plan ? plan.name + " · " + plan.tag : "Não selecionado"),
         "Validade: " + (plan ? plan.duration : "Não definida"),
@@ -1873,6 +1861,7 @@ function applyInputMasks() {
         "WhatsApp: " + getValue("form-phone"),
         "CRP ou identificação: " + getValue("form-crp"),
         "HWID, se já tiver: " + getValue("form-hwid"),
+        "Cupom de desconto: " + (getValue("form-coupon") || "Não informado"),
         "Pagamento: " + getValue("form-payment"),
         "",
         "Observações:",
@@ -1905,7 +1894,7 @@ if (licenseForm) {
 
     const paymentMode = getValue("form-payment");
 
-    if (paymentMode === "manual" || !state.plan.paid || state.profile === "teste" || state.profile === "enterprise") {
+    if (paymentMode === "manual" || !state.plan.paid || state.profile === "enterprise") {
       const subject = "Solicitação de licença WorkMind PSI";
       const body = getLicenseRequestText();
 
@@ -1928,15 +1917,14 @@ if (licenseForm) {
       }
 
       const payload = {
-const payload = {
-  nome: getValue("form-name"),
-  email: getValue("form-email"),
-  whatsapp: getValue("form-phone"),
-  crp: getValue("form-crp"),
-  hwid: getValue("form-hwid"),
-  cupom: getValue("form-coupon"),
-  plano: state.plan.id
-};
+        nome: getValue("form-name"),
+        email: getValue("form-email"),
+        whatsapp: getValue("form-phone"),
+        crp: getValue("form-crp"),
+        hwid: getValue("form-hwid"),
+        cupom: getValue("form-coupon"),
+        plano: state.plan.id
+      };
 
       if (!payload.hwid || payload.hwid.length < 3) {
         alert("Informe o HWID exibido na WorkMind PSI antes de continuar.");
