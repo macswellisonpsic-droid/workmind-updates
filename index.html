@@ -1227,20 +1227,25 @@
       <div class="checkout-shell">
         <div class="checkout-panel">
           <div class="stepper">
-            <div class="step-pill active" data-step-indicator="1">1. Contratação</div>
+            <div class="step-pill active" data-step-indicator="1">1. Solicitação</div>
             <div class="step-pill" data-step-indicator="2">2. Perfil</div>
             <div class="step-pill" data-step-indicator="3">3. Plano</div>
             <div class="step-pill" data-step-indicator="4">4. Dados</div>
           </div>
 
           <div class="checkout-step active" data-step="1">
-            <h3>Confirme a contratação</h3>
-            <p>Esta etapa confirma que a compra será realizada pelos planos oficiais disponíveis.</p>
+            <h3>O que você deseja fazer?</h3>
+            <p>Escolha entre contratar uma licença oficial ou solicitar uma demonstração gratuita de 7 dias.</p>
 
             <div class="choice-grid">
               <button class="choice-card active" type="button" data-checkout-mode="normal">
-                <h3>Comprar licença</h3>
-                <p>Para novas contratações, renovações e ativações oficiais da WorkMind PSI.</p>
+                <h3>Comprar licença oficial</h3>
+                <p>Para novas contratações, renovações e ativações pagas da WorkMind PSI.</p>
+              </button>
+
+              <button class="choice-card" type="button" id="start-free-trial">
+                <h3>Solicitar teste gratuito</h3>
+                <p>Para pedir uma licença demonstrativa de 7 dias, liberada mediante análise.</p>
               </button>
             </div>
           </div>
@@ -1260,10 +1265,6 @@
                 <p>Para clínicas com mais de um psicólogo ou equipes em expansão.</p>
               </button>
 
-              <button class="choice-card" type="button" data-profile="teste">
-                <h3>Teste gratuito de 7 dias</h3>
-                <p>Solicite uma licença demonstrativa, liberada mediante análise e vinculada ao e-mail e HWID informado.</p>
-              </button>
 
               <button class="choice-card" type="button" data-profile="enterprise">
                 <h3>Enterprise ou sob consulta</h3>
@@ -1288,8 +1289,8 @@
           </div>
 
           <div class="checkout-step" data-step="4">
-	<h3>Dados para ativação</h3>
-	<p>Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.</p>
+	<h3 id="activation-title">Dados para ativação</h3>
+	<p id="activation-description">Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.</p>
 
             <form id="license-form">
               <div class="form-grid">
@@ -1318,12 +1319,12 @@
   <input id="form-hwid" name="hwid" type="text" required placeholder="Cole aqui o HWID exibido na ferramenta">
 </div>
 
-<div class="field">
+<div class="field" id="coupon-field">
   <label for="form-coupon">Cupom de desconto, se houver</label>
   <input id="form-coupon" name="cupom" type="text" autocomplete="off" placeholder="Insira seu cupom de desconto">
 </div>
 
-<div class="field">
+<div class="field" id="payment-field">
   <label for="form-payment">Forma de finalização</label>
   <select id="form-payment" name="pagamento">
     <option value="mercado-pago" selected>Pagamento online pelo Mercado Pago</option>
@@ -1364,8 +1365,8 @@
           <h3>Resumo do pedido</h3>
 
           <div class="summary-line">
-            <span>Contratação</span>
-            <strong id="summary-mode">Contratação oficial</strong>
+            <span>Solicitação</span>
+            <strong id="summary-mode">Licença oficial</strong>
           </div>
 
           <div class="summary-line">
@@ -1388,9 +1389,6 @@
             <strong id="summary-price">R$0,00</strong>
           </div>
 
-          <div class="actions">
-            <button class="btn btn-primary" type="button" id="summary-next">Continuar</button>
-          </div>
         </aside>
       </div>
     </section>
@@ -1583,7 +1581,7 @@
     }
 
     function modeLabel() {
-      return "Contratação oficial";
+      return state.profile === "teste" ? "Teste gratuito" : "Licença oficial";
     }
 
     function setPriceMode(mode) {
@@ -1644,6 +1642,46 @@
       document.getElementById("summary-plan").textContent = state.plan ? state.plan.name + " · " + state.plan.tag : "Não selecionado";
       document.getElementById("summary-duration").textContent = state.plan ? state.plan.duration : "Não definida";
       document.getElementById("summary-price").textContent = state.plan ? brl(currentPrice(state.plan)) : "R$0,00";
+      updateCheckoutContext();
+    }
+
+    function updateCheckoutContext() {
+      const title = document.getElementById("activation-title");
+      const description = document.getElementById("activation-description");
+      const checkoutButton = document.getElementById("checkout-submit-btn");
+      const paymentField = document.getElementById("payment-field");
+      const couponField = document.getElementById("coupon-field");
+
+      const isFreeTrial = state.profile === "teste" || (state.plan && !state.plan.paid);
+      const isEnterprise = state.profile === "enterprise";
+
+      if (title) {
+        title.textContent = isFreeTrial ? "Dados para solicitar o teste gratuito" : "Dados para ativação";
+      }
+
+      if (description) {
+        description.textContent = isFreeTrial
+          ? "Informe os dados necessários para solicitar sua licença demonstrativa de 7 dias. A liberação será analisada pela WorkMind Global."
+          : "Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.";
+      }
+
+      if (checkoutButton) {
+        if (isFreeTrial) {
+          checkoutButton.textContent = "Solicitar teste gratuito";
+        } else if (isEnterprise) {
+          checkoutButton.textContent = "Solicitar orientação";
+        } else {
+          checkoutButton.textContent = "Comprar licença agora";
+        }
+      }
+
+      if (paymentField) {
+        paymentField.style.display = isFreeTrial ? "none" : "grid";
+      }
+
+      if (couponField) {
+        couponField.style.display = isFreeTrial ? "none" : "grid";
+      }
     }
 
     function planCard(plan, forCheckout) {
@@ -1718,6 +1756,23 @@
       });
     });
 
+    const startFreeTrial = document.getElementById("start-free-trial");
+    if (startFreeTrial) {
+      startFreeTrial.addEventListener("click", function() {
+        state.profile = "teste";
+        state.plan = plans.find(p => p.profile === "teste") || null;
+
+        document.querySelectorAll("[data-checkout-mode]").forEach(function(el) {
+          el.classList.remove("active");
+        });
+
+        startFreeTrial.classList.add("active");
+        updateSummary();
+        syncPixVisibility();
+        setStep(4);
+      });
+    }
+
     document.querySelectorAll("[data-preview-profile]").forEach(function(btn) {
       btn.addEventListener("click", function() {
         setPreviewProfile(btn.dataset.previewProfile);
@@ -1747,15 +1802,6 @@
       });
     });
 
-    const summaryNext = document.getElementById("summary-next");
-    if (summaryNext) {
-      summaryNext.addEventListener("click", function() {
-        if (!state.priceMode) return setStep(1);
-        if (!state.profile) return setStep(2);
-        if (!state.plan) return setStep(3);
-        setStep(4);
-      });
-    }
 
     const paymentSelect = document.getElementById("form-payment");
     const pixArea = document.getElementById("pix-area");
@@ -1764,9 +1810,11 @@ function syncPixVisibility() {
   if (!paymentSelect || !pixArea) return;
 
   const value = String(paymentSelect.value || "").toLowerCase();
-  const shouldShow = value !== "manual";
+  const isFreeTrial = state.profile === "teste" || (state.plan && !state.plan.paid);
+  const shouldShow = value !== "manual" && !isFreeTrial;
 
   pixArea.classList.toggle("visible", shouldShow);
+  updateCheckoutContext();
 }
 
     if (paymentSelect) {
@@ -1954,7 +2002,7 @@ if (licenseForm) {
     } finally {
       if (checkoutButton) {
         checkoutButton.disabled = false;
-        checkoutButton.textContent = "Comprar licença agora";
+        updateCheckoutContext();
       }
     }
   });
