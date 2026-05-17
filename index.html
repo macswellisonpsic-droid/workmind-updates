@@ -1221,7 +1221,7 @@
     <section class="section" id="licenca">
       <h2>Solicitação de licença.</h2>
 <p>
-  Escolha seu plano, preencha os dados de ativação e finalize a compra com segurança pelo Mercado Pago. Após a confirmação do pagamento, sua licença será gerada automaticamente.
+  Escolha seu plano, preencha os dados de ativação e finalize a compra com segurança pelo Mercado Pago. Após a confirmação do pagamento, sua licença será gerada e enviada automaticamente por e-mail.
 </p>
 
       <div class="checkout-shell">
@@ -1260,10 +1260,6 @@
                 <p>Para clínicas com mais de um psicólogo ou equipes em expansão.</p>
               </button>
 
-              <button class="choice-card" type="button" data-profile="teste">
-                <h3>Licença teste</h3>
-                <p>Para conhecer a ferramenta antes da contratação.</p>
-              </button>
 
               <button class="choice-card" type="button" data-profile="enterprise">
                 <h3>Enterprise ou sob consulta</h3>
@@ -1550,7 +1546,6 @@
     const WORKMIND_LICENSE_API = "https://workmind-license-api.vercel.app";
 
     const plans = [
-      { id: "teste_pagamento", profile: "teste", name: "Teste de pagamento", tag: "Teste R$ 1", duration: "7 dias", normal: 1, description: "Plano temporário para validar o fluxo automático de pagamento e licença.", paid: true },
       { id: "mensal", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Mensal", duration: "30 dias", normal: 97, description: "Plano mensal para profissional individual.", paid: true },
       { id: "bimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Bimestral", duration: "60 dias", normal: 182, description: "Plano de 60 dias para continuidade com menor compromisso inicial.", paid: true },
       { id: "trimestral", profile: "profissional", name: "WorkMind PSI Pro Premium", tag: "Trimestral", duration: "90 dias", normal: 267, description: "Plano trimestral para uso contínuo com melhor organização.", paid: true },
@@ -1635,7 +1630,6 @@
       const profileMap = {
         profissional: "Profissional individual",
         clinica: "Clínica ou equipe",
-        teste: "Licença teste",
         enterprise: "Enterprise ou sob consulta"
       };
 
@@ -1669,7 +1663,7 @@
       let filtered = [];
 
       if (state.previewProfile === "profissional") {
-        filtered = plans.filter(p => p.profile === "teste" || p.profile === "profissional");
+        filtered = plans.filter(p => p.profile === "profissional");
       } else {
         filtered = plans.filter(p => p.profile === "clinica" || p.profile === "enterprise");
       }
@@ -1683,9 +1677,6 @@
 
       let filtered = plans.filter(p => p.profile === state.profile);
 
-      if (state.profile === "teste") {
-        filtered = plans.filter(p => p.profile === "teste");
-      }
 
       if (state.profile === "enterprise") {
         filtered = plans.filter(p => p.profile === "enterprise");
