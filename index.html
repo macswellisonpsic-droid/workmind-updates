@@ -3,1545 +3,643 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>WorkMind PSI | Download Oficial</title>
-
   <meta name="description" content="Baixe a WorkMind PSI, consulte planos, solicite licença e acompanhe as atualizações da plataforma." />
-
   <style>
+
     :root {
-      --slate-950: #020617;
-      --slate-900: #0f172a;
-      --slate-800: #1e293b;
-      --slate-700: #334155;
-      --slate-600: #475569;
-      --slate-500: #64748b;
-      --slate-300: #cbd5e1;
-      --slate-200: #e2e8f0;
-      --slate-100: #f1f5f9;
-      --slate-50: #f8fafc;
-      --white: #ffffff;
-      --indigo: #4f46e5;
-      --indigo-dark: #3730a3;
-      --violet: #7c3aed;
-      --emerald: #059669;
-      --gold: #facc15;
-      --amber-bg: #fffbeb;
-      --amber-text: #92400e;
-      --shadow-soft: 0 24px 80px rgba(15, 23, 42, .18);
-      --shadow-strong: 0 34px 100px rgba(2, 6, 23, .38);
+      --ink-950:#05030b; --ink-900:#0d0818; --ink-850:#130b24; --ink-800:#181027;
+      --card:#ffffff; --card-soft:#fbfaff; --muted:#6b6477; --muted-2:#8a8298;
+      --line:rgba(31,19,58,.12); --line-strong:rgba(124,58,237,.22);
+      --purple:#5b21b6; --purple-2:#7c3aed; --violet:#a78bfa; --pink:#ec4899;
+      --gold:#d6a84f; --gold-soft:#fff7df; --green:#059669; --red:#b91c1c;
+      --shadow:0 26px 90px rgba(8,5,20,.18); --shadow-deep:0 40px 120px rgba(3,1,12,.42);
+      --radius-xl:34px; --radius-lg:24px; --radius-md:18px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink-950);background:#f6f1ff;overflow-x:hidden} body::before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 11% 12%,rgba(236,72,153,.23),transparent 28%),radial-gradient(circle at 84% 4%,rgba(167,139,250,.28),transparent 32%),linear-gradient(145deg,#0a0614 0%,#140923 38%,#2e1065 72%,#12081d 100%)} body::after{content:"";position:fixed;inset:0;z-index:-2;opacity:.32;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000 0%,transparent 82%)} a{color:inherit} button,input,select,textarea{font:inherit}.shell{width:min(1220px,calc(100% - 36px));margin:0 auto}.topbar{position:sticky;top:14px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:14px auto 0;padding:12px 14px;border:1px solid rgba(255,255,255,.18);border-radius:26px;background:rgba(10,6,20,.62);backdrop-filter:blur(18px);box-shadow:0 22px 70px rgba(0,0,0,.25);color:#fff}.brand{display:flex;align-items:center;gap:13px;min-width:max-content;text-decoration:none}.brand img{height:48px;max-width:185px;object-fit:contain;border-radius:16px;background:rgba(255,255,255,.08);padding:4px}.brand-fallback{display:none;width:48px;height:48px;place-items:center;border-radius:16px;background:linear-gradient(135deg,var(--purple),var(--pink));font-weight:1000}.brand-text{display:grid;line-height:1.05}.brand-text strong{font-size:13px;letter-spacing:.16em;text-transform:uppercase}.brand-text span{font-size:12px;color:rgba(255,255,255,.66);font-weight:800}.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}.nav-links a{font-size:12px;font-weight:850;text-decoration:none;color:rgba(255,255,255,.74);padding:10px 12px;border-radius:999px}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.1)}.hero{display:grid;grid-template-columns:minmax(0,1.1fr) 420px;gap:36px;align-items:center;min-height:calc(100vh - 112px);padding:54px 0 76px;color:#fff}.hero-copy{position:relative}.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;padding:9px 13px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.08);color:#ede9fe;font-size:12px;font-weight:950;letter-spacing:.16em;text-transform:uppercase}.eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 6px rgba(214,168,79,.18)}.hero h1{margin:0;max-width:760px;font-size:clamp(42px,7vw,92px);line-height:.88;letter-spacing:-.085em}.hero h1 span{display:block;background:linear-gradient(90deg,#fff,#f4e8ff,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:660px;margin:24px 0 0;color:rgba(255,255,255,.76);font-size:18px;line-height:1.78}.hero-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;max-width:700px}.metric{padding:16px;border:1px solid rgba(255,255,255,.14);border-radius:22px;background:rgba(255,255,255,.07);backdrop-filter:blur(12px)}.metric strong{display:block;font-size:24px;letter-spacing:-.04em}.metric span{display:block;margin-top:4px;color:rgba(255,255,255,.62);font-size:12px;font-weight:800;line-height:1.35}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:15px 20px;border:0;border-radius:18px;text-decoration:none;font-weight:950;line-height:1.15;text-align:center;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease,opacity .2s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{color:#fff;background:linear-gradient(135deg,#6d28d9,#9333ea 55%,#db2777);box-shadow:0 20px 52px rgba(124,58,237,.38)}.btn-secondary{color:#fff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16)}.btn-outline{background:#fff;color:var(--ink-900);border:1px solid var(--line);box-shadow:0 16px 34px rgba(28,19,48,.08)}.btn-dark{background:var(--ink-900);color:#fff}.btn.disabled{pointer-events:none;opacity:.52;filter:grayscale(.25);box-shadow:none}.product-panel{position:relative;padding:20px;border-radius:38px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);box-shadow:var(--shadow-deep);backdrop-filter:blur(20px)}.product-window{overflow:hidden;border-radius:30px;background:#fff;color:var(--ink-950);box-shadow:0 28px 80px rgba(0,0,0,.24)}.window-top{display:flex;align-items:center;justify-content:space-between;padding:18px 18px 14px;border-bottom:1px solid rgba(15,8,32,.08);background:linear-gradient(135deg,#fff,#f8f5ff)}.dots{display:flex;gap:7px}.dots span{width:10px;height:10px;border-radius:99px;background:#ddd}.dots span:nth-child(1){background:#f87171}.dots span:nth-child(2){background:#fbbf24}.dots span:nth-child(3){background:#34d399}.window-title{font-size:12px;font-weight:950;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.mock-dashboard{padding:22px}.mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mock-card{min-height:104px;border:1px solid rgba(31,19,58,.1);border-radius:22px;padding:16px;background:linear-gradient(135deg,#fbfaff,#fff)}.mock-card.large{grid-column:1/-1;min-height:150px;background:radial-gradient(circle at top right,rgba(124,58,237,.17),transparent 34%),linear-gradient(135deg,#160c2d,#2e1065);color:#fff}.mock-label{font-size:11px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}.mock-card.large .mock-label{color:rgba(255,255,255,.58)}.mock-value{display:block;margin-top:8px;font-size:28px;font-weight:1000;letter-spacing:-.05em}.mock-lines{display:grid;gap:8px;margin-top:14px}.mock-lines span{display:block;height:8px;border-radius:999px;background:rgba(255,255,255,.18)}.mock-lines span:nth-child(2){width:72%}.mock-lines.light span{background:#eee8fb}.download-float{position:relative;left:auto;bottom:auto;width:100%;margin-top:16px;padding:18px;border-radius:26px;background:rgba(255,255,255,.96);color:var(--ink-950);box-shadow:0 24px 70px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.5)}.download-float h2{margin:0 0 8px;font-size:22px;letter-spacing:-.04em}.download-float p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.version-mini{display:grid;gap:9px;margin-top:14px}.version-mini div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:12px;font-weight:850;color:var(--muted)}.version-mini strong{color:var(--ink-950);text-align:right}.section{margin:0 0 28px;padding:38px;border:1px solid rgba(255,255,255,.64);border-radius:38px;background:rgba(255,255,255,.95);box-shadow:var(--shadow);position:relative;overflow:hidden}.section::before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.3),transparent)}.section-header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}.section-kicker{display:inline-flex;align-items:center;width:max-content;margin-bottom:12px;padding:8px 12px;border-radius:999px;background:#f1ebff;color:#5b21b6;font-size:11px;font-weight:950;letter-spacing:.14em;text-transform:uppercase}.section h2{margin:0;font-size:clamp(30px,4.5vw,56px);letter-spacing:-.075em;line-height:.98}.section p{color:var(--muted);line-height:1.75}.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}.contract-card{background:linear-gradient(135deg,#fff,#fbfaff);border:1px solid var(--line);border-radius:30px;padding:24px;height:100%}.contract-scroll{max-height:220px;overflow:auto;padding:18px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}.contract-scroll p{margin:0 0 12px;font-size:14px}.contract-accept{display:flex;align-items:flex-start;gap:12px;margin-top:16px;padding:14px;border-radius:20px;background:#f8f5ff;color:var(--ink-850);font-size:13px;font-weight:900;line-height:1.45;cursor:pointer}.contract-accept input{width:19px;height:19px;margin-top:1px;accent-color:var(--purple);flex:0 0 auto}.download-stack{display:grid;gap:14px;align-content:start}.download-main-card{padding:26px;border-radius:30px;color:#fff;background:radial-gradient(circle at top right,rgba(236,72,153,.36),transparent 34%),linear-gradient(135deg,#170b2d,#35106b);box-shadow:0 24px 70px rgba(91,33,182,.28);height:100%}.download-main-card .icon{width:62px;height:62px;display:grid;place-items:center;border-radius:22px;background:rgba(255,255,255,.13);font-size:30px}.download-main-card h3{margin:18px 0 10px;font-size:30px;letter-spacing:-.055em}.download-main-card p{margin:0;color:rgba(255,255,255,.74)}.security-note{font-size:12px;color:rgba(255,255,255,.62);line-height:1.55;margin-top:14px}.feature-grid,.versions-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.feature,.version-card,.choice-card,.plan-card,.mode-option{position:relative;border:1px solid var(--line);border-radius:26px;padding:22px;background:linear-gradient(145deg,#fff,#fbfaff);box-shadow:0 14px 32px rgba(25,14,49,.05);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.feature:hover,.choice-card:hover,.plan-card:hover,.mode-option:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:0 20px 52px rgba(35,20,70,.12)}.feature span{display:grid;place-items:center;width:44px;height:44px;margin-bottom:16px;border-radius:16px;color:#fff;background:linear-gradient(135deg,var(--purple),var(--pink));font-weight:950}.feature h3,.version-card h3,.choice-card h3,.plan-card h3,.mode-option h3{margin:0 0 9px;font-size:19px;letter-spacing:-.03em}.feature p,.version-card p,.choice-card p,.plan-card p,.mode-option p{margin:0;font-size:14px;color:var(--muted);line-height:1.62}.launch-card{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:stretch;background:radial-gradient(circle at 88% 12%,rgba(214,168,79,.28),transparent 28%),linear-gradient(135deg,#fff,#f5efff)}.launch-date{display:grid;place-items:center;text-align:center;border-radius:30px;color:#fff;background:linear-gradient(135deg,#160b2c,#5b21b6 62%,#db2777);box-shadow:0 24px 70px rgba(91,33,182,.25);padding:24px}.launch-date strong{display:block;font-size:54px;line-height:.9;letter-spacing:-.08em}.launch-date span{display:block;margin-top:9px;color:rgba(255,255,255,.72);font-weight:950;letter-spacing:.13em;text-transform:uppercase;font-size:12px}.license-mode-switch,.plans-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.mode-option{flex:1;min-width:260px;text-align:left;cursor:pointer}.mode-option.active,.choice-card.active,.plan-card.active,.plans-tab.active{border-color:#7c3aed;background:linear-gradient(135deg,#faf7ff,#fff);box-shadow:0 0 0 5px rgba(124,58,237,.11),0 20px 52px rgba(35,20,70,.11)}.mode-card,.notice{margin-top:18px;padding:17px 18px;border:1px solid rgba(214,168,79,.32);border-radius:24px;background:linear-gradient(135deg,#fff8e5,#fbf7ff);color:#7c551c;line-height:1.65;font-size:14px}.plans-tab{border:1px solid var(--line);background:#fff;color:var(--ink-850);border-radius:999px;padding:12px 17px;font-weight:950;cursor:pointer}.checkout-shell{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:22px;align-items:start;margin-top:26px}.checkout-panel,.summary-card{border:1px solid var(--line);background:#fff;border-radius:32px;padding:24px;box-shadow:0 18px 48px rgba(30,18,58,.08)}.summary-card{position:sticky;top:98px;background:linear-gradient(145deg,#fff,#fbfaff)}.stepper{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}.step-pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:9px 12px;background:#f3effa;color:var(--muted);font-size:12px;font-weight:950}.step-pill.active{background:#160b2d;color:#fff}.checkout-step{display:none}.checkout-step.active{display:block}.choice-grid,.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.choice-card,.plan-card{cursor:pointer;text-align:left}.plan-tag{display:inline-flex;margin-bottom:12px;padding:7px 10px;border-radius:999px;background:#f1ebff;color:#5b21b6;font-size:11px;font-weight:950}.price{margin:10px 0 8px;font-size:32px;line-height:1;font-weight:1000;letter-spacing:-.06em}.price small{font-size:12px;color:var(--muted);font-weight:850;letter-spacing:0}.summary-card h3{margin:0 0 14px;font-size:24px;letter-spacing:-.05em}.summary-line{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);font-weight:850}.summary-line strong{color:var(--ink-950);text-align:right}.summary-total{margin-top:16px;padding:18px;border-radius:24px;background:radial-gradient(circle at top right,rgba(236,72,153,.2),transparent 42%),linear-gradient(135deg,#1b0b35,#4c1d95);color:#fff}.summary-total span{display:block;font-size:11px;font-weight:950;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.58)}.summary-total strong{display:block;margin-top:6px;font-size:34px;letter-spacing:-.06em}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:950;color:var(--ink-800)}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#faf8ff;border-radius:18px;padding:14px 15px;outline:none;color:var(--ink-950);font-size:14px}.field textarea{min-height:118px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{background:#fff;border-color:#7c3aed;box-shadow:0 0 0 5px rgba(124,58,237,.11)}.pix-area{display:none;margin-top:18px;padding:18px;border-radius:24px;background:#faf8ff;border:1px solid var(--line)}.pix-area.visible{display:block}.pix-key{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px;padding:13px;border-radius:18px;background:#fff;border:1px dashed rgba(124,58,237,.36);font-size:13px;font-weight:950;overflow-wrap:anywhere}.mini-btn{border:0;border-radius:14px;padding:10px 12px;background:#efe7ff;color:#5b21b6;font-weight:950;cursor:pointer}.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.step{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:26px;background:#fff;counter-increment:step}.steps{counter-reset:step}.step::before{content:counter(step);display:grid;place-items:center;width:44px;height:44px;border-radius:16px;color:#fff;background:linear-gradient(135deg,var(--purple),var(--pink));font-weight:950}.step h3{margin:2px 0 6px;font-size:17px}.step p{margin:0;font-size:14px}.version-card{min-height:168px;display:flex;flex-direction:column}.edition{display:inline-flex;width:max-content;margin-top:auto;padding:7px 10px;border-radius:999px;background:#f3effa;color:var(--muted);font-size:11px;font-weight:950}.footer{color:rgba(255,255,255,.68);text-align:center;padding:28px 0 46px;font-size:13px;line-height:1.7}.footer-legal-links{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}.footer-legal-links a{color:#fff;text-decoration:none;font-weight:950}.mobile-only{display:none}@media(max-width:1100px){.hero{grid-template-columns:1fr}.product-panel{max-width:680px}.download-float{position:relative;left:auto;bottom:auto;width:100%;margin-top:16px}.checkout-shell{grid-template-columns:1fr}.summary-card{position:relative;top:auto}.split,.launch-card{grid-template-columns:1fr}.contract-card,.download-main-card{height:auto}}@media(max-width:860px){.topbar{position:relative;top:auto;align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start}.hero{min-height:auto;padding:40px 0 58px}.hero-metrics,.feature-grid,.versions-grid,.steps{grid-template-columns:1fr}.section{padding:28px;border-radius:30px}.section-header{display:block}.choice-grid,.plan-grid,.form-grid{grid-template-columns:1fr}}@media(max-width:620px){.shell{width:min(100% - 22px,1220px)}.brand-text span{display:none}.nav-links a{font-size:11px;padding:8px 9px}.hero h1{font-size:clamp(42px,14vw,62px)}.hero p{font-size:16px}.actions .btn,.btn-download{width:100%}.product-panel{padding:12px;border-radius:28px}.mock-grid{grid-template-columns:1fr}.mock-card.large{grid-column:auto}.section{padding:22px;border-radius:26px}.checkout-panel,.summary-card{padding:20px;border-radius:26px}.stepper{flex-direction:column}.launch-date strong{font-size:42px}}
+
+
+    /* ===== Correções finais de alinhamento e logo ===== */
+    .site-main{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    .shell{
+      width:min(1220px, calc(100vw - 48px));
+      max-width:1220px;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--slate-900);
+    .topbar.shell,
+    footer.footer.shell{
+      width:min(1220px, calc(100vw - 48px));
+      max-width:1220px;
+      margin-left:auto !important;
+      margin-right:auto !important;
+    }
+
+    .brand img{
+      height:58px;
+      width:58px;
+      max-width:58px;
+      padding:0;
+      border-radius:18px;
+      object-fit:cover;
+      background:transparent;
+      box-shadow:0 16px 44px rgba(124,58,237,.35);
+    }
+
+    .brand-fallback{
+      width:58px;
+      height:58px;
+      border-radius:18px;
       background:
-        radial-gradient(circle at top left, rgba(99, 102, 241, .35), transparent 34%),
-        radial-gradient(circle at top right, rgba(124, 58, 237, .22), transparent 32%),
-        linear-gradient(135deg, #020617 0%, #111827 46%, #312e81 100%);
+        radial-gradient(circle at 70% 28%,rgba(255,255,255,.85),transparent 10%),
+        linear-gradient(135deg,#8b5cf6,#4c1d95 58%,#1e0b3f);
+      box-shadow:0 16px 44px rgba(124,58,237,.35);
+      position:relative;
     }
 
-    a { color: inherit; }
-    button, input, select, textarea { font-family: inherit; }
-
-    .page {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
+    .brand-fallback::before{
+      content:"";
+      position:absolute;
+      inset:14px 12px;
+      border:5px solid rgba(255,255,255,.9);
+      border-radius:999px;
+      border-right-color:transparent;
+      transform:rotate(-8deg);
     }
 
-    .nav {
-      min-height: 96px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      color: white;
+    .brand-fallback::after{
+      content:"";
+      position:absolute;
+      width:28px;
+      height:6px;
+      right:10px;
+      top:31px;
+      border-radius:999px;
+      background:rgba(255,255,255,.9);
+      box-shadow:-12px -10px 0 -1px rgba(255,255,255,.9);
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-size: 13px;
-      min-width: max-content;
+    .product-panel{
+      justify-self:end;
+      width:100%;
+      max-width:520px;
     }
 
-    .brand img {
-      height: 62px;
-      width: auto;
-      max-width: 230px;
-      border-radius: 18px;
-      object-fit: contain;
-      background: rgba(255,255,255,.08);
-      box-shadow: 0 18px 42px rgba(79, 70, 229, .28);
+    .download-float{
+      position:relative;
+      left:auto;
+      bottom:auto;
+      width:100%;
+      margin-top:16px;
     }
 
-    .brand-mark {
-      width: 58px;
-      height: 58px;
-      display: none;
-      place-items: center;
-      border-radius: 19px;
-      background: linear-gradient(135deg, var(--indigo), var(--violet));
-      box-shadow: 0 16px 38px rgba(79, 70, 229, .35);
-      color: white;
-      letter-spacing: 0;
-      font-size: 16px;
+    .section.shell{
+      width:min(1220px, calc(100vw - 48px));
+      max-width:1220px;
+      margin-left:auto !important;
+      margin-right:auto !important;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+    .split{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      align-items:stretch;
     }
 
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(255,255,255,.78);
-      font-size: 12.5px;
-      font-weight: 800;
-      padding: 10px 11px;
-      border-radius: 999px;
+    @media(max-width:1100px){
+      .shell,
+      .topbar.shell,
+      footer.footer.shell,
+      .section.shell{
+        width:min(100% - 28px, 1220px);
+      }
+
+      .product-panel{
+        justify-self:center;
+        max-width:720px;
+      }
+
+      .split{
+        grid-template-columns:1fr;
+      }
     }
 
-    .nav-links a:hover {
-      background: rgba(255,255,255,.1);
-      color: white;
+    @media(max-width:620px){
+      .shell,
+      .topbar.shell,
+      footer.footer.shell,
+      .section.shell{
+        width:min(100% - 22px, 1220px);
+      }
+
+      .brand img,
+      .brand-fallback{
+        width:52px;
+        height:52px;
+        max-width:52px;
+      }
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(320px, .96fr);
-      gap: 28px;
-      align-items: center;
-      padding: 34px 0 42px;
+
+    /* ===== Upgrade visual dos cards de planos e versões ===== */
+    .versions-grid,
+    .plan-grid{
+      gap:18px;
     }
 
-    .hero-copy {
-      color: white;
-      padding: 22px 0;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.15);
-      color: #c7d2fe;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      max-width: 760px;
-      font-size: clamp(38px, 6vw, 76px);
-      line-height: .94;
-      letter-spacing: -.07em;
-    }
-
-    .hero p {
-      margin: 20px 0 0;
-      max-width: 660px;
-      color: rgba(255,255,255,.76);
-      line-height: 1.75;
-      font-size: 17px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 15px 20px;
-      border-radius: 17px;
-      border: 0;
-      text-decoration: none;
-      font-weight: 900;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
-      line-height: 1.2;
-      text-align: center;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--indigo), var(--violet));
-      color: white;
-      box-shadow: 0 18px 42px rgba(79, 70, 229, .35);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,.1);
-      color: white;
-      border: 1px solid rgba(255,255,255,.15);
-    }
-
-    .btn-outline {
-      background: #ffffff;
-      color: var(--slate-800);
-      border: 1px solid var(--slate-200);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, .08);
-    }
-
-    .btn-outline:hover {
-      background: var(--slate-50);
-      color: var(--indigo-dark);
-      border-color: #c7d2fe;
-    }
-
-    .download-card {
-      background: rgba(255,255,255,.96);
-      border: 1px solid rgba(255,255,255,.45);
-      border-radius: 34px;
-      padding: 26px;
-      box-shadow: var(--shadow-strong);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .download-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 8px;
-      background: linear-gradient(90deg, var(--indigo), var(--violet), var(--indigo));
-    }
-
-    .download-icon {
-      width: 64px;
-      height: 64px;
-      display: grid;
-      place-items: center;
-      border-radius: 22px;
-      background: #eef2ff;
-      color: var(--indigo-dark);
-      font-size: 28px;
-      margin-bottom: 18px;
-    }
-
-    .download-card h2 {
-      margin: 0 0 10px;
-      font-size: 29px;
-      letter-spacing: -.04em;
-    }
-
-    .download-card p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.65;
-    }
-
-    .version-box {
-      display: grid;
-      gap: 10px;
-      margin: 20px 0;
-      padding: 16px;
-      border-radius: 20px;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-    }
-
-    .version-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      color: var(--slate-600);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .version-row strong {
-      color: var(--slate-900);
-      text-align: right;
-    }
-
-    .contract-box {
-      margin: 20px 0 16px;
-      padding: 16px;
-      border-radius: 22px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      text-align: left;
-    }
-
-    .contract-box h3 {
-      margin: 0 0 10px;
-      font-size: 16px;
-      color: var(--slate-950);
-      letter-spacing: -.02em;
-    }
-
-    .contract-scroll {
-      max-height: 180px;
-      overflow-y: auto;
-      padding: 12px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-    }
-
-    .contract-scroll p {
-      margin: 0 0 10px;
-      color: var(--slate-600);
-      line-height: 1.55;
-      font-size: 13px;
-    }
-
-    .contract-accept {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 13px;
-      color: var(--slate-700);
-      font-size: 13px;
-      line-height: 1.45;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .contract-accept input {
-      width: 18px;
-      height: 18px;
-      margin-top: 1px;
-      accent-color: var(--indigo);
-      flex: 0 0 auto;
-    }
-
-    .btn-download {
-      width: 100%;
-      min-height: 58px;
-      font-size: 16px;
-    }
-
-    .btn.disabled {
-      pointer-events: none;
-      opacity: .55;
-      filter: grayscale(.25);
-      box-shadow: none;
-    }
-
-    .security-note {
-      margin-top: 14px;
-      font-size: 12px;
-      color: var(--slate-500);
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    .section {
-      background: rgba(255,255,255,.96);
-      border-radius: 34px;
-      padding: 34px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(255,255,255,.55);
-      margin: 0 0 28px;
-    }
-
-    .section h2 {
-      margin: 0 0 10px;
-      font-size: clamp(28px, 4vw, 44px);
-      letter-spacing: -.06em;
-      color: var(--slate-950);
-    }
-
-    .section > p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.75;
-      max-width: 920px;
-    }
-
-    .launch {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) 280px;
-      gap: 18px;
-      align-items: stretch;
+    .plan-card,
+    .version-card{
+      overflow:hidden;
+      padding:0;
+      border-radius:30px;
       background:
-        radial-gradient(circle at top right, rgba(79,70,229,.22), transparent 36%),
-        linear-gradient(135deg, #ffffff, #eef2ff);
-    }
-
-    .launch-badge {
-      display: inline-flex;
-      align-items: center;
-      width: max-content;
-      gap: 8px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #3730a3;
-      border: 1px solid #c7d2fe;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .launch-date {
-      display: grid;
-      place-items: center;
-      text-align: center;
-      border-radius: 28px;
-      color: white;
-      padding: 22px;
-      background: linear-gradient(135deg, var(--indigo), var(--violet));
-      box-shadow: 0 18px 42px rgba(79, 70, 229, .28);
-    }
-
-    .launch-date strong {
-      display: block;
-      font-size: 44px;
-      line-height: .95;
-      letter-spacing: -.07em;
-    }
-
-    .launch-date span {
-      display: block;
-      margin-top: 8px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.85);
-    }
-
-    .feature-grid, .versions-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .feature, .version-card {
-      border: 1px solid var(--slate-200);
-      border-radius: 24px;
-      padding: 20px;
-      background: white;
-    }
-
-    .feature span {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      background: #eef2ff;
-      color: var(--indigo-dark);
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .feature h3, .version-card h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
-    }
-
-    .feature p, .version-card p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .mode-card {
-      margin-top: 22px;
-      border: 1px solid rgba(250, 204, 21, .35);
-      background: linear-gradient(135deg, rgba(250, 204, 21, .08), rgba(79, 70, 229, .06));
-      color: var(--slate-700);
-      border-radius: 22px;
-      padding: 16px 18px;
-      line-height: 1.65;
-      font-size: 14px;
-    }
-
-    .mode-card strong { color: var(--amber-text); }
-
-    .license-mode-switch {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .mode-option {
-      border: 1px solid var(--slate-200);
-      background: white;
-      border-radius: 22px;
-      padding: 18px;
-      cursor: pointer;
-      text-align: left;
-      transition: .2s ease;
-    }
-
-    .mode-option.active {
-      border-color: var(--indigo);
-      background: #f8f7ff;
-      box-shadow: 0 0 0 4px rgba(79,70,229,.12);
-    }
-
-    .mode-option h3 {
-      margin: 0 0 7px;
-      color: var(--slate-950);
-      font-size: 18px;
-    }
-
-    .mode-option p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.55;
-      font-size: 14px;
-    }
-
-    .plans-tabs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    .plans-tab {
-      border: 1px solid var(--slate-200);
-      background: white;
-      color: var(--slate-700);
-      border-radius: 999px;
-      padding: 12px 16px;
-      cursor: pointer;
-      font-weight: 900;
-      transition: .2s ease;
-    }
-
-    .plans-tab.active,
-    .plans-tab:hover {
-      background: #eef2ff;
-      border-color: #c7d2fe;
-      color: #3730a3;
-    }
-
-    .plans-preview-panel {
-      display: none;
-    }
-
-    .plans-preview-panel.active {
-      display: block;
-    }
-
-    .checkout-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 18px;
-      align-items: start;
-      margin-top: 26px;
-    }
-
-    .checkout-panel {
-      border: 1px solid var(--slate-200);
-      background: white;
-      border-radius: 28px;
-      padding: 22px;
-    }
-
-    .stepper {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .step-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      padding: 8px 11px;
-      background: var(--slate-100);
-      color: var(--slate-600);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .step-pill.active {
-      background: #eef2ff;
-      color: #3730a3;
-      border: 1px solid #c7d2fe;
-    }
-
-    .checkout-step { display: none; }
-    .checkout-step.active { display: block; }
-
-    .choice-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .choice-card, .plan-card {
-      border: 1px solid var(--slate-200);
-      background: var(--white);
-      border-radius: 22px;
-      padding: 18px;
-      cursor: pointer;
-      text-align: left;
-      transition: .2s ease;
-    }
-
-    .choice-card:hover, .plan-card:hover {
-      transform: translateY(-2px);
-      border-color: #c7d2fe;
-      box-shadow: 0 16px 40px rgba(15,23,42,.08);
-    }
-
-    .choice-card.active, .plan-card.active {
-      border-color: var(--indigo);
-      box-shadow: 0 0 0 4px rgba(79,70,229,.12), 0 16px 40px rgba(15,23,42,.08);
-      background: #f8f7ff;
-    }
-
-    .choice-card h3, .plan-card h3 {
-      margin: 0 0 7px;
-      color: var(--slate-950);
-      font-size: 18px;
-    }
-
-    .choice-card p, .plan-card p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.55;
-      font-size: 14px;
-    }
-
-    .plan-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .plan-tag {
-      display: inline-flex;
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 11px;
-      font-weight: 900;
-      background: #eef2ff;
-      color: #3730a3;
-      margin-bottom: 12px;
-    }
-
-    .price {
-      margin: 12px 0 4px;
-      color: var(--slate-950);
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 950;
-      letter-spacing: -.05em;
-    }
-
-    .price small {
-      color: var(--slate-500);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0;
-    }
-
-    .beta-chip {
-      display: inline-flex;
-      margin-left: 6px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(250, 204, 21, .45);
-      color: var(--gold);
-      background: rgba(250, 204, 21, .08);
-      font-size: 10px;
-      font-weight: 950;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .summary-card {
-      position: sticky;
-      top: 18px;
-      border: 1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.96);
-      border-radius: 28px;
-      padding: 22px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .summary-card h3 {
-      margin: 0 0 12px;
-      color: var(--slate-950);
-      font-size: 21px;
-      letter-spacing: -.04em;
-    }
-
-    .summary-line {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--slate-200);
-      color: var(--slate-600);
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .summary-line strong {
-      color: var(--slate-950);
-      text-align: right;
-    }
-
-    .summary-total {
-      margin-top: 16px;
-      padding: 16px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #eef2ff, #faf5ff);
-      color: var(--slate-950);
-    }
-
-    .summary-total span {
-      display: block;
-      color: var(--slate-600);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
-
-    .summary-total strong {
-      display: block;
-      margin-top: 4px;
-      font-size: 30px;
-      letter-spacing: -.05em;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .field {
-      display: grid;
-      gap: 7px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    .field label {
-      font-size: 12px;
-      font-weight: 900;
-      color: var(--slate-700);
-      letter-spacing: .02em;
-    }
-
-    .field input, .field select, .field textarea {
-      width: 100%;
-      border: 1px solid var(--slate-200);
-      background: var(--slate-50);
-      border-radius: 16px;
-      padding: 13px 14px;
-      outline: none;
-      color: var(--slate-900);
-      font-size: 14px;
-    }
-
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .field input:focus, .field select:focus, .field textarea:focus {
-      border-color: var(--indigo);
-      background: white;
-      box-shadow: 0 0 0 4px rgba(79,70,229,.11);
-    }
-
-    .pix-area {
-      display: none;
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 24px;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-    }
-
-    .pix-area.visible {
-      display: block;
-    }
-
-    .pix-key {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
-      padding: 12px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px dashed #c7d2fe;
-      color: var(--slate-950);
-      font-weight: 900;
-      font-size: 13px;
-      line-height: 1.35;
-      word-break: break-word;
-      overflow-wrap: anywhere;
-    }
-
-    .mini-btn {
-      border: 0;
-      border-radius: 12px;
-      padding: 9px 11px;
-      cursor: pointer;
-      background: #eef2ff;
-      color: #3730a3;
-      font-weight: 900;
-    }
-
-    .notice {
-      margin-top: 16px;
-      border: 1px solid #fde68a;
-      background: var(--amber-bg);
-      color: var(--amber-text);
-      border-radius: 22px;
-      padding: 16px;
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-      counter-reset: step;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 48px minmax(0, 1fr);
-      gap: 14px;
-      align-items: start;
-      padding: 18px;
-      border-radius: 24px;
-      border: 1px solid var(--slate-200);
-      background: white;
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--indigo), var(--violet));
-      color: white;
-      font-weight: 900;
-      box-shadow: 0 14px 30px rgba(79, 70, 229, .24);
-    }
-
-    .step h3 {
-      margin: 2px 0 6px;
-      font-size: 17px;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--slate-600);
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .version-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 178px;
-    }
-
-    .version-card h3 {
-      font-size: 19px;
-      letter-spacing: -.03em;
-    }
-
-    .version-card .edition {
-      margin-top: auto;
-      display: inline-flex;
-      width: max-content;
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 11px;
-      font-weight: 900;
-      background: var(--slate-100);
-      color: var(--slate-700);
-    }
-
-.footer {
-  color: rgba(255,255,255,.68);
-  text-align: center;
-  padding: 22px 0 40px;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.footer-legal-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.footer-legal-links a {
-  color: rgba(255,255,255,.88);
-  font-weight: 900;
-  text-decoration: none;
-}
-
-.footer-legal-links a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-    @media (max-width: 1080px) {
-      .checkout-shell {
-        grid-template-columns: 1fr;
+        radial-gradient(circle at top right, rgba(124,58,237,.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fcfaff 100%);
+      border:1px solid rgba(91,33,182,.12);
+      box-shadow:0 18px 44px rgba(31,17,59,.07);
+    }
+
+    .plan-card::before,
+    .version-card::before{
+      content:"";
+      display:block;
+      height:5px;
+      background:linear-gradient(90deg,#7c3aed,#a855f7,#ec4899);
+    }
+
+    .plan-card:hover,
+    .version-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(124,58,237,.26);
+      box-shadow:0 24px 60px rgba(31,17,59,.12);
+    }
+
+    .plan-card-body,
+    .version-card-body{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+
+    .plan-top,
+    .version-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .plan-card h3,
+    .version-card h3{
+      margin:0;
+      font-size:24px;
+      line-height:1.02;
+      letter-spacing:-.045em;
+      color:var(--ink-950);
+    }
+
+    .plan-card p,
+    .version-card p{
+      margin:12px 0 0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .plan-badge,
+    .version-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#f4ecff;
+      color:#5b21b6;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .version-badge{
+      background:#f3effa;
+      color:#43364f;
+    }
+
+    .version-number{
+      display:block;
+      font-size:34px;
+      line-height:.92;
+      font-weight:1000;
+      letter-spacing:-.07em;
+      color:var(--ink-950);
+      margin-bottom:4px;
+    }
+
+    .version-caption{
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .version-foot,
+    .plan-foot{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:auto;
+      padding-top:16px;
+      border-top:1px solid rgba(31,19,58,.08);
+    }
+
+    .version-foot span,
+    .plan-foot span{
+      color:var(--muted-2);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .version-foot strong,
+    .plan-foot strong{
+      color:var(--ink-950);
+      font-size:13px;
+      font-weight:950;
+      text-align:right;
+    }
+
+    .plan-tag{
+      margin:0;
+      background:#f1ebff;
+      color:#5b21b6;
+      border:1px solid rgba(124,58,237,.12);
+    }
+
+    .plan-subtitle{
+      margin-top:8px;
+      color:#5a5167;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .price{
+      margin:18px 0 12px;
+      display:flex;
+      align-items:flex-end;
+      gap:10px;
+      flex-wrap:wrap;
+      font-size:36px;
+      color:var(--ink-950);
+    }
+
+    .price small{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#f8f3ff;
+      color:#6b21a8;
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .plan-points{
+      list-style:none;
+      padding:0;
+      margin:16px 0 0;
+      display:grid;
+      gap:10px;
+    }
+
+    .plan-points li{
+      position:relative;
+      padding-left:22px;
+      color:#564d65;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .plan-points li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:8px;
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#7c3aed,#ec4899);
+      box-shadow:0 0 0 4px rgba(124,58,237,.10);
+    }
+
+    .plan-emphasis{
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:18px;
+      background:linear-gradient(135deg,#faf5ff,#fff);
+      border:1px solid rgba(124,58,237,.10);
+      color:#6b21a8;
+      font-size:12px;
+      font-weight:950;
+      line-height:1.5;
+    }
+
+    .plan-card.recommended{
+      border-color:rgba(124,58,237,.24);
+      box-shadow:0 0 0 4px rgba(124,58,237,.08), 0 22px 58px rgba(31,17,59,.11);
+    }
+
+    .plan-card.recommended .plan-badge{
+      background:linear-gradient(135deg,#6d28d9,#a855f7,#ec4899);
+      color:#fff;
+    }
+
+    .plans-tab{
+      min-height:48px;
+      box-shadow:0 10px 28px rgba(29,18,55,.05);
+    }
+
+    @media(max-width:860px){
+      .version-number{
+        font-size:30px;
       }
 
-      .summary-card {
-        position: relative;
-        top: auto;
+      .plan-card h3,
+      .version-card h3{
+        font-size:22px;
       }
 
-      .plan-grid {
-        grid-template-columns: 1fr;
+      .price{
+        font-size:30px;
       }
     }
 
-    @media (max-width: 920px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 18px 0 4px;
-      }
-
-      .brand img {
-        height: 54px;
-        max-width: 210px;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .hero, .launch {
-        grid-template-columns: 1fr;
-        padding-top: 22px;
-      }
-
-      .feature-grid, .versions-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 24px;
-        border-radius: 28px;
-      }
-
-      .form-grid, .choice-grid, .license-mode-switch {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        width: min(100% - 22px, 1180px);
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: clamp(36px, 12vw, 54px);
-      }
-
-      .download-card {
-        border-radius: 28px;
-        padding: 22px;
-      }
-
-      .nav-links a {
-        font-size: 12px;
-        padding: 9px 10px;
-      }
-
-      .version-row {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .stepper {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <header class="nav">
-      <div class="brand">
-        <img src="./assets/logo.workmind.psi.png" alt="WorkMind PSI" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="brand-mark">WM</div>
-        <span>WorkMind PSI</span>
-      </div>
+  <header class="topbar shell">
+    <a class="brand" href="#top" aria-label="WorkMind PSI">
+      <img src="./assets/logo.workmind.psi.png" alt="WorkMind PSI" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+      <div class="brand-fallback"></div>
+      <div class="brand-text"><strong>WorkMind PSI</strong><span>Download oficial</span></div>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#download">Download</a><a href="#lancamento">Ultimate 5.0</a><a href="#recursos">Recursos</a><a href="#planos">Planos</a><a href="#licenca">Licença</a><a href="#versoes">Versões</a><a href="#instalacao">Instalação</a><a href="politica-de-privacidade.html">Privacidade</a><a href="termos-de-uso.html">Termos</a>
+    </nav>
+  </header>
 
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#download">Download</a>
-        <a href="#lancamento">Lançamento</a>
-        <a href="#planos">Planos</a>
-        <a href="#licenca">Solicitar licença</a>
-        <a href="#versoes">Versões</a>
-        <a href="#instalacao">Instalação</a>
-        <a href="#suporte">Suporte</a>
-	<a href="politica-de-privacidade.html">Privacidade</a>
-	<a href="termos-de-uso.html">Termos</a>
-      </nav>
-    </header>
-
-    <section class="hero">
+  <main id="top" class="site-main">
+    <section class="hero shell">
       <div class="hero-copy">
-        <div class="eyebrow">Download oficial</div>
-
-        <h1>WorkMind PSI para gestão clínica profissional.</h1>
-
-        <p>
-          Baixe a versão oficial da WorkMind PSI, acompanhe as próximas atualizações, consulte os planos disponíveis e solicite sua licença em um fluxo de contratação mais organizado.
-        </p>
-
+        <div class="eyebrow">Plataforma profissional para psicólogos</div>
+        <h1>Download oficial da <span>WorkMind PSI.</span></h1>
+        <p>Organize sua rotina clínica com uma ferramenta profissional, moderna e completa, criada para apoiar psicólogos na gestão de pacientes, documentos, recursos clínicos, comunicação e acompanhamento terapêutico.</p>
+        <div class="hero-metrics">
+          <div class="metric"><strong>4.3.0</strong><span>Versão estável atual</span></div>
+          <div class="metric"><strong>5.0.0</strong><span>Ultimate em lançamento</span></div>
+          <div class="metric"><strong>Windows</strong><span>Instalador oficial</span></div>
+        </div>
         <div class="actions">
-          <a class="btn btn-primary" href="#licenca">Iniciar solicitação</a>
-          <a class="btn btn-secondary" href="#termos-download">Ver termos e download</a>
-          <a class="btn btn-secondary" href="#planos">Ver planos</a>
+          <a class="btn btn-primary" href="#licenca">Comprar ou solicitar licença</a>
+          <a class="btn btn-secondary" href="#download">Baixar instalador</a>
+          <a class="btn btn-secondary" href="#licenca">Teste gratuito</a>
         </div>
       </div>
-
-      <aside class="download-card" id="download">
-        <div class="download-icon">↓</div>
-
-        <h2>Instalador oficial</h2>
-
-        <p>
-          Recomendado para novos usuários e também para quem precisa reinstalar a ferramenta.
-        </p>
-
-        <div class="version-box">
-          <div class="version-row">
-            <span>Produto</span>
-            <strong>WorkMind PSI</strong>
-          </div>
-
-          <div class="version-row">
-            <span>Versão estável atual</span>
-            <strong>4.3.0 PRO PREMIUM</strong>
-          </div>
-
-          <div class="version-row">
-            <span>Sistema</span>
-            <strong>Windows</strong>
+      <aside class="product-panel" aria-label="Prévia WorkMind PSI">
+        <div class="product-window">
+          <div class="window-top"><div class="dots"><span></span><span></span><span></span></div><div class="window-title">WorkMind clinical OS</div></div>
+          <div class="mock-dashboard">
+            <div class="mock-grid">
+              <div class="mock-card large"><div class="mock-label">Painel clínico</div><strong class="mock-value">Gestão integrada</strong><div class="mock-lines"><span></span><span></span><span></span></div></div>
+              <div class="mock-card"><div class="mock-label">Documentos</div><strong class="mock-value">PDF</strong><div class="mock-lines light"><span></span><span></span></div></div>
+              <div class="mock-card"><div class="mock-label">Portal</div><strong class="mock-value">5.0</strong><div class="mock-lines light"><span></span><span></span></div></div>
+            </div>
           </div>
         </div>
-
-        <div class="contract-box" id="termos-download">
-          <h3>Termo de uso e responsabilidade</h3>
-
-          <div class="contract-scroll">
-            <p>
-              Ao baixar e instalar a WorkMind PSI, declaro estar ciente de que a ferramenta é destinada ao apoio da organização da rotina clínica, gestão de pacientes, documentos, triagens, recursos clínicos e acompanhamento profissional.
-            </p>
-
-            <p>
-              A WorkMind PSI não substitui o julgamento técnico do psicólogo, não realiza diagnóstico automaticamente e não elimina a responsabilidade profissional pelo uso, interpretação e guarda das informações registradas.
-            </p>
-
-            <p>
-              O usuário é responsável por utilizar a ferramenta de acordo com as normas éticas da Psicologia, boas práticas profissionais, sigilo, proteção de dados e orientações aplicáveis à sua atuação.
-            </p>
-
-            <p>
-              Também declaro compreender que a licença de uso é individual, vinculada à ativação informada pela WorkMind Global, e que a distribuição, cópia não autorizada, revenda ou compartilhamento indevido da ferramenta não é permitido.
-            </p>
-
-            <p>
-              Para ativação inicial, o usuário deverá enviar o HWID exibido pela ferramenta para workmindglobal@gmail.com e aguardar o envio da licença correspondente.
-            </p>
-          </div>
-
-          <label class="contract-accept">
-            <input type="checkbox" id="accept-contract">
-            <span>Li e aceito os termos de uso, responsabilidade profissional e ativação da WorkMind PSI.</span>
-          </label>
-        </div>
-
-        <a id="download-btn" class="btn btn-primary btn-download disabled" href="#" aria-disabled="true">
-          Aceite os termos para baixar
-        </a>
-
-        <div class="security-note">
-          Baixe apenas por esta página oficial. Após o download, execute o instalador e siga as etapas na tela.
+        <div class="download-float">
+          <h2>Instalador oficial</h2>
+          <p>Baixe somente por esta página. Após instalar, informe o HWID para ativação da licença.</p>
+          <div class="version-mini"><div><span>Produto</span><strong>WorkMind PSI</strong></div><div><span>Versão</span><strong>4.3.0 PRO PREMIUM</strong></div><div><span>Sistema</span><strong>Windows</strong></div></div>
         </div>
       </aside>
     </section>
 
-    <section class="section launch" id="lancamento">
-      <div>
-        <div class="launch-badge">Próxima atualização</div>
-        <h2>WorkMind PSI Ultimate 5.0.0</h2>
-        <p>
-          A próxima atualização integra Triagem Digital e Portal do Paciente, ampliando a experiência entre profissional e paciente com fluxos mais modernos, organizados e práticos.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#licenca">Solicitar licença ou demonstrar interesse</a>
-          <a class="btn btn-outline" href="#recursos">Ver recursos</a>
+    <section class="section shell split" id="download">
+      <div class="contract-card" id="termos-download">
+        <span class="section-kicker">Termos antes do download</span>
+        <h2>Download com aceite profissional.</h2>
+        <p>O botão de download continua bloqueado até o usuário aceitar os termos de uso, responsabilidade profissional e ativação.</p>
+        <div class="contract-scroll">
+          <p>Ao baixar e instalar a WorkMind PSI, declaro estar ciente de que a ferramenta é destinada ao apoio da organização da rotina clínica, gestão de pacientes, documentos, triagens, recursos clínicos e acompanhamento profissional.</p>
+          <p>A WorkMind PSI não substitui o julgamento técnico do psicólogo, não realiza diagnóstico automaticamente e não elimina a responsabilidade profissional pelo uso, interpretação e guarda das informações registradas.</p>
+          <p>O usuário é responsável por utilizar a ferramenta de acordo com as normas éticas da Psicologia, boas práticas profissionais, sigilo, proteção de dados e orientações aplicáveis à sua atuação.</p>
+          <p>Também declaro compreender que a licença de uso é individual, vinculada à ativação informada pela WorkMind Global, e que a distribuição, cópia não autorizada, revenda ou compartilhamento indevido da ferramenta não é permitido.</p>
+          <p>Para ativação inicial, o usuário deverá enviar o HWID exibido pela ferramenta para workmindglobal@gmail.com e aguardar o envio da licença correspondente.</p>
         </div>
+        <label class="contract-accept"><input type="checkbox" id="accept-contract"><span>Li e aceito os termos de uso, responsabilidade profissional e ativação da WorkMind PSI.</span></label>
       </div>
-
-      <div class="launch-date">
-        <div>
-          <strong>01/06</strong>
-          <span>lançamento 2026</span>
+      <aside class="download-stack">
+        <div class="download-main-card">
+          <div class="icon">↓</div>
+          <h3>WorkMind PSI Setup</h3>
+          <p>Instalador oficial para novos usuários, reinstalações e atualizações controladas.</p>
+          <div class="actions"><a id="download-btn" class="btn btn-primary btn-download disabled" href="#" aria-disabled="true">Aceite os termos para baixar</a></div>
+          <div class="security-note">Evite links enviados por terceiros. Use apenas o canal oficial da WorkMind Global.</div>
         </div>
-      </div>
+        <a class="btn btn-outline" href="#instalacao">Ver instruções de instalação</a>
+      </aside>
     </section>
 
-    <section class="section" id="recursos">
-      <h2>Uma experiência premium para a rotina clínica.</h2>
+    <section class="section shell launch-card" id="lancamento">
+      <div><span class="section-kicker">Próxima atualização</span><h2>WorkMind PSI Ultimate 5.0.0</h2><p>A próxima versão amplia a experiência entre profissional e paciente com Triagem Digital, Portal do Paciente, comunicação mais organizada e fluxos mais modernos para a rotina clínica.</p><div class="actions"><a class="btn btn-primary" href="#licenca">Demonstrar interesse</a><a class="btn btn-outline" href="#recursos">Ver diferenciais</a></div></div>
+      <div class="launch-date"><div><strong>01/06</strong><span>lançamento 2026</span></div></div>
+    </section>
 
-      <p>
-        A WorkMind PSI reúne recursos essenciais para facilitar a organização do atendimento psicológico, reduzir retrabalho e deixar o acompanhamento mais claro para o profissional.
-      </p>
-
+    <section class="section shell" id="recursos">
+      <div class="section-header"><div><span class="section-kicker">Ecossistema clínico</span><h2>Mais que um download, uma apresentação de produto.</h2></div><p>Centralize pacientes, documentos, recursos clínicos, triagens, comunicação e acompanhamento em uma ferramenta criada para deixar sua rotina mais organizada, profissional e produtiva.</p></div>
       <div class="feature-grid">
-        <article class="feature">
-          <span>01</span>
-          <h3>Gestão de pacientes</h3>
-          <p>Organize informações clínicas, dados de contato, histórico e acompanhamento em um ambiente estruturado.</p>
-        </article>
-
-        <article class="feature">
-          <span>02</span>
-          <h3>Documentos e contratos</h3>
-          <p>Gere documentos clínicos, contratos e materiais com visual profissional e identidade consistente.</p>
-        </article>
-
-        <article class="feature">
-          <span>03</span>
-          <h3>Triagem e portal</h3>
-          <p>Use fluxos digitais para coletar informações, orientar pacientes e receber arquivos de acompanhamento.</p>
-        </article>
-
-        <article class="feature">
-          <span>04</span>
-          <h3>Recursos clínicos</h3>
-          <p>Conte com questionários, entrevistas, checklists e instrumentos de apoio organizados por finalidade.</p>
-        </article>
-
-        <article class="feature">
-          <span>05</span>
-          <h3>Comunicação</h3>
-          <p>Envie mensagens com modelos prontos, organize orientações e facilite o contato com pacientes.</p>
-        </article>
-
-        <article class="feature">
-          <span>06</span>
-          <h3>Rotina mais fluida</h3>
-          <p>Centralize tarefas e informações importantes para tornar a prática clínica mais objetiva e produtiva.</p>
-        </article>
+        <article class="feature"><span>01</span><h3>Gestão de pacientes</h3><p>Cadastro, histórico, informações clínicas, contatos e acompanhamento em uma estrutura profissional.</p></article>
+        <article class="feature"><span>02</span><h3>Documentos e PDFs</h3><p>Contratos, registros, declarações e materiais com identidade visual consistente.</p></article>
+        <article class="feature"><span>03</span><h3>Triagem digital</h3><p>Coleta de informações iniciais com fluxo mais moderno para a versão Ultimate.</p></article>
+        <article class="feature"><span>04</span><h3>Portal do paciente</h3><p>Experiência complementar para orientar, acompanhar e facilitar a comunicação.</p></article>
+        <article class="feature"><span>05</span><h3>Recursos clínicos</h3><p>Questionários, entrevistas, checklists e instrumentos de apoio organizados por finalidade.</p></article>
+        <article class="feature"><span>06</span><h3>Comunicação</h3><p>Modelos de mensagem, apoio ao contato com pacientes e rotinas clínicas mais fluidas.</p></article>
       </div>
     </section>
 
-    <section class="section" id="planos">
-      <h2>Planos e licenças.</h2>
-      <p>
-        Consulte os planos disponíveis e escolha entre opções para profissionais ou clínicas.
-      </p>
-
-      <div class="license-mode-switch">
-        <button class="mode-option active" type="button" data-price-mode="normal">
-          <h3>Planos disponíveis</h3>
-          <p>Valores oficiais para novas contratações, renovações e usuários que desejam ativar a WorkMind PSI.</p>
-        </button>
-      </div>
-
-      <div class="mode-card" id="plans-mode-note">
-        <strong>Valores oficiais:</strong> os cards abaixo exibem os planos disponíveis para contratação.
-      </div>
-
-      <div class="plans-tabs">
-        <button class="plans-tab active" type="button" data-preview-profile="profissional">Profissionais</button>
-        <button class="plans-tab" type="button" data-preview-profile="clinica">Clínicas e equipes</button>
-      </div>
-
+    <section class="section shell" id="planos">
+      <span class="section-kicker">Licenças oficiais</span><h2>Planos com apresentação mais elegante e estratégica.</h2><p>Escolha a licença mais adequada para sua rotina profissional, seja para uso individual, clínica ou equipe, com opções pensadas para diferentes necessidades de organização, continuidade e crescimento.</p>
+      <div class="license-mode-switch"><button class="mode-option active" type="button" data-price-mode="normal"><h3>Planos disponíveis</h3><p>Valores oficiais para novas contratações, renovações e ativações da WorkMind PSI.</p></button></div>
+      <div class="mode-card" id="plans-mode-note"><strong>Valores oficiais:</strong> os cards abaixo exibem os planos disponíveis para contratação.</div>
+      <div class="plans-tabs"><button class="plans-tab active" type="button" data-preview-profile="profissional">Profissionais</button><button class="plans-tab" type="button" data-preview-profile="clinica">Clínicas e equipes</button></div>
       <div id="plans-preview"></div>
     </section>
 
-    <section class="section" id="licenca">
-      <h2>Solicitação de licença.</h2>
-<p>
-  Escolha seu plano, preencha os dados de ativação e finalize a compra com segurança pelo Mercado Pago. Após a confirmação do pagamento, sua licença será gerada e enviada automaticamente por e-mail.
-</p>
-
+    <section class="section shell" id="licenca">
+      <span class="section-kicker">Checkout e ativação</span><h2>Solicitação de licença.</h2><p>Escolha o perfil, selecione o plano, preencha os dados de ativação e finalize com segurança pelo Mercado Pago. A licença será enviada por e-mail após aprovação.</p>
       <div class="checkout-shell">
         <div class="checkout-panel">
-          <div class="stepper">
-            <div class="step-pill active" data-step-indicator="1">1. Solicitação</div>
-            <div class="step-pill" data-step-indicator="2">2. Perfil</div>
-            <div class="step-pill" data-step-indicator="3">3. Plano</div>
-            <div class="step-pill" data-step-indicator="4">4. Dados</div>
-          </div>
-
-          <div class="checkout-step active" data-step="1">
-            <h3>O que você deseja fazer?</h3>
-            <p>Escolha entre contratar uma licença oficial ou solicitar uma demonstração gratuita de 7 dias.</p>
-
-            <div class="choice-grid">
-              <button class="choice-card active" type="button" data-checkout-mode="normal">
-                <h3>Comprar licença oficial</h3>
-                <p>Para novas contratações, renovações e ativações pagas da WorkMind PSI.</p>
-              </button>
-
-              <button class="choice-card" type="button" id="start-free-trial">
-                <h3>Solicitar teste gratuito</h3>
-                <p>Para pedir uma licença demonstrativa de 7 dias, liberada mediante análise.</p>
-              </button>
-            </div>
-          </div>
-
-          <div class="checkout-step" data-step="2">
-            <h3>Escolha o tipo de acesso</h3>
-            <p>Essa escolha filtra os planos para deixar o processo mais claro.</p>
-
-            <div class="choice-grid">
-              <button class="choice-card" type="button" data-profile="profissional">
-                <h3>Profissional individual</h3>
-                <p>Para psicólogos que usarão a WorkMind PSI individualmente.</p>
-              </button>
-
-              <button class="choice-card" type="button" data-profile="clinica">
-                <h3>Clínica ou equipe</h3>
-                <p>Para clínicas com mais de um psicólogo ou equipes em expansão.</p>
-              </button>
-
-
-              <button class="choice-card" type="button" data-profile="enterprise">
-                <h3>Enterprise ou sob consulta</h3>
-                <p>Para demandas especiais, equipes maiores ou condições personalizadas.</p>
-              </button>
-            </div>
-
-            <div class="actions">
-              <button class="btn btn-outline" type="button" data-back-step="1">Voltar</button>
-            </div>
-          </div>
-
-          <div class="checkout-step" data-step="3">
-            <h3>Escolha o plano</h3>
-            <p>Selecione um card para avançar. O resumo será atualizado automaticamente.</p>
-
-            <div class="plan-grid" id="plan-grid"></div>
-
-            <div class="actions">
-              <button class="btn btn-outline" type="button" data-back-step="2">Voltar</button>
-            </div>
-          </div>
-
-          <div class="checkout-step" data-step="4">
-	<h3 id="activation-title">Dados para ativação</h3>
-	<p id="activation-description">Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.</p>
-
-            <form id="license-form">
-              <div class="form-grid">
-                <div class="field">
-                  <label for="form-name">Nome completo</label>
-                  <input id="form-name" name="nome" type="text" required placeholder="Seu nome completo">
-                </div>
-
-                <div class="field">
-                  <label for="form-email">E-mail de contato</label>
-                  <input id="form-email" name="email" type="email" required placeholder="seuemail@dominio.com">
-                </div>
-
-                <div class="field">
-                  <label for="form-phone">WhatsApp</label>
-                  <input id="form-phone" name="telefone" type="text" required inputmode="numeric" autocomplete="tel" maxlength="15" placeholder="(00) 00000-0000">
-                </div>
-
-                <div class="field">
-                  <label for="form-crp">CRP ou identificação</label>
-                  <input id="form-crp" name="crp" type="text" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="CRP 00/00000">
-                </div>
-
-<div class="field">
-  <label for="form-hwid">HWID da WorkMind PSI</label>
-  <input id="form-hwid" name="hwid" type="text" required placeholder="Cole aqui o HWID exibido na ferramenta">
-</div>
-
-<div class="field" id="coupon-field">
-  <label for="form-coupon">Cupom de desconto, se houver</label>
-  <input id="form-coupon" name="cupom" type="text" autocomplete="off" placeholder="Insira seu cupom de desconto">
-</div>
-
-<div class="field" id="payment-field">
-  <label for="form-payment">Forma de finalização</label>
-  <select id="form-payment" name="pagamento">
-    <option value="mercado-pago" selected>Pagamento online pelo Mercado Pago</option>
-    <option value="manual">Preciso de orientação manual</option>
-  </select>
-</div>
-
-                <div class="field full">
-                  <label for="form-message">Observações</label>
-                  <textarea id="form-message" name="mensagem" placeholder="Informe detalhes da solicitação, quantidade de profissionais, dúvidas ou dados importantes."></textarea>
-                </div>
-              </div>
-
-<div class="pix-area visible" id="pix-area">
-  <h3>Pagamento seguro</h3>
-  <p>
-    Ao finalizar, você será direcionado ao Mercado Pago. Após a aprovação, a licença será gerada e enviada automaticamente por e-mail.
-  </p>
-  <div class="pix-key">
-    <span>Pix, cartão ou métodos disponíveis pelo Mercado Pago</span>
-  </div>
-</div>
-
-              <div class="notice">
-  Importante: informe o HWID corretamente. A licença será vinculada ao e-mail e ao HWID preenchidos neste formulário.
-</div>
-
-<div class="actions">
-  <button class="btn btn-outline" type="button" data-back-step="3">Voltar</button>
-  <button class="btn btn-primary" type="submit" id="checkout-submit-btn">Comprar licença agora</button>
-  <button class="btn btn-outline" type="button" id="copy-license-request">Copiar dados da solicitação</button>
-</div>
-            </form>
-          </div>
+          <div class="stepper"><div class="step-pill active" data-step-indicator="1">1. Início</div><div class="step-pill" data-step-indicator="2">2. Perfil</div><div class="step-pill" data-step-indicator="3">3. Plano</div><div class="step-pill" data-step-indicator="4">4. Dados</div></div>
+          <div class="checkout-step active" data-step="1"><h3>Como deseja começar?</h3><p>Selecione uma opção para avançar no fluxo de contratação ou teste.</p><div class="choice-grid"><button class="choice-card active" type="button" data-checkout-mode="normal"><h3>Comprar licença</h3><p>Para profissionais, clínicas e equipes que desejam ativação oficial.</p></button><button class="choice-card" type="button" id="start-free-trial"><h3>Teste gratuito</h3><p>Solicitação demonstrativa de 7 dias, vinculada ao e-mail e ao HWID.</p></button></div></div>
+          <div class="checkout-step" data-step="2"><h3>Escolha seu perfil</h3><p>Isso define quais planos serão exibidos na próxima etapa.</p><div class="choice-grid"><button class="choice-card" type="button" data-profile="profissional"><h3>Profissional individual</h3><p>Licença para uso individual de psicólogo ou profissional.</p></button><button class="choice-card" type="button" data-profile="clinica"><h3>Clínica ou equipe</h3><p>Planos anuais para equipes com múltiplos profissionais.</p></button><button class="choice-card" type="button" data-profile="enterprise"><h3>Enterprise</h3><p>Para demandas acima de 6 psicólogos ou condições específicas.</p></button></div><div class="actions"><button class="btn btn-outline" type="button" data-back-step="1">Voltar</button></div></div>
+          <div class="checkout-step" data-step="3"><h3>Escolha o plano</h3><p>Selecione o plano desejado para preencher os dados de ativação.</p><div id="plan-grid" class="plan-grid"></div><div class="actions"><button class="btn btn-outline" type="button" data-back-step="2">Voltar</button></div></div>
+          <div class="checkout-step" data-step="4"><h3 id="activation-title">Dados para ativação</h3><p id="activation-description">Informe os dados que serão usados para gerar sua licença. O e-mail e o HWID precisam estar corretos.</p><form id="license-form"><div class="form-grid"><div class="field"><label for="form-name">Nome completo *</label><input id="form-name" required autocomplete="name"></div><div class="field"><label for="form-email">E-mail de ativação *</label><input id="form-email" type="email" required autocomplete="email"></div><div class="field"><label for="form-phone">WhatsApp *</label><input id="form-phone" required inputmode="tel" placeholder="(81) 99999-9999"></div><div class="field"><label for="form-crp">CRP ou identificação</label><input id="form-crp" placeholder="CRP 02/00000"></div><div class="field full"><label for="form-hwid">HWID exibido pela WorkMind PSI *</label><input id="form-hwid" required placeholder="Cole aqui o HWID da ferramenta"></div><div class="field" id="coupon-field"><label for="form-coupon">Cupom</label><input id="form-coupon" placeholder="Opcional"></div><div class="field" id="payment-field"><label for="form-payment">Pagamento</label><select id="form-payment"><option value="mercadopago">Mercado Pago</option><option value="manual">Solicitar suporte manual</option></select></div><div class="field full"><label for="form-message">Observações</label><textarea id="form-message" placeholder="Inclua informações adicionais, se necessário."></textarea></div></div><div id="pix-area" class="pix-area"><strong>Pagamento online</strong><p>Ao clicar em comprar, você será direcionado ao Mercado Pago. A licença será emitida após a confirmação.</p><div class="pix-key"><span>Suporte: workmindglobal@gmail.com</span><button class="mini-btn" type="button" id="copy-pix">Copiar</button></div></div><div class="notice">Confira e-mail, WhatsApp e HWID antes de finalizar. Dados incorretos podem impedir a ativação automática.</div><div class="actions"><button class="btn btn-primary" id="checkout-submit-btn" type="submit">Comprar licença agora</button><button class="btn btn-outline" type="button" id="copy-license-request">Copiar solicitação</button><button class="btn btn-outline" type="button" id="activation-back-btn">Voltar</button></div></form></div>
         </div>
-
-        <aside class="summary-card">
-          <h3>Resumo do pedido</h3>
-
-          <div class="summary-line">
-            <span>Solicitação</span>
-            <strong id="summary-mode">Licença oficial</strong>
-          </div>
-
-          <div class="summary-line">
-            <span>Perfil</span>
-            <strong id="summary-profile">Não selecionado</strong>
-          </div>
-
-          <div class="summary-line">
-            <span>Plano</span>
-            <strong id="summary-plan">Não selecionado</strong>
-          </div>
-
-          <div class="summary-line">
-            <span>Validade</span>
-            <strong id="summary-duration">Não definida</strong>
-          </div>
-
-          <div class="summary-total">
-            <span>Valor do pedido</span>
-            <strong id="summary-price">R$0,00</strong>
-          </div>
-
-        </aside>
+        <aside class="summary-card"><h3>Resumo da licença</h3><div class="summary-line"><span>Contratação</span><strong id="summary-mode">Licença oficial</strong></div><div class="summary-line"><span>Perfil</span><strong id="summary-profile">Não selecionado</strong></div><div class="summary-line"><span>Plano</span><strong id="summary-plan">Não selecionado</strong></div><div class="summary-line"><span>Validade</span><strong id="summary-duration">Não definida</strong></div><div class="summary-total"><span>Total</span><strong id="summary-price">R$0,00</strong></div><p>Resumo de pagamento.</p></aside>
       </div>
     </section>
 
-    <section class="section" id="versoes">
-      <h2>Histórico de versões.</h2>
-      <p>
-        A WorkMind PSI evoluiu por ciclos, saindo da base Beta, avançando para a linha Pro e consolidando a experiência Pro Premium antes da chegada da versão Ultimate 5.0.0.
-      </p>
+    <section class="section shell" id="instalacao"><span class="section-kicker">Instalação</span><h2>Fluxo claro para o usuário final.</h2><div class="steps"><article class="step"><div><h3>Baixe o instalador</h3><p>Aceite os termos e faça o download oficial da WorkMind PSI.</p></div></article><article class="step"><div><h3>Instale no Windows</h3><p>Execute o instalador e abra a ferramenta após concluir a instalação.</p></div></article><article class="step"><div><h3>Copie o HWID</h3><p>O identificador aparece na tela de ativação da WorkMind PSI.</p></div></article><article class="step"><div><h3>Finalize a licença</h3><p>Preencha o formulário, pague pelo Mercado Pago e aguarde o envio automático por e-mail.</p></div></article></div></section>
 
+    
+    <section class="section shell" id="versoes">
+      <span class="section-kicker">Histórico</span>
+      <h2>Linha de evolução da WorkMind PSI.</h2>
+      <p>Acompanhe a evolução da WorkMind PSI e veja como a ferramenta vem sendo aprimorada continuamente para oferecer uma experiência cada vez mais completa, estável e profissional.</p>
       <div class="versions-grid">
         <article class="version-card">
-          <h3>2.0.0</h3>
-          <p>Primeira base Beta da WorkMind PSI, com estrutura inicial da aplicação, organização clínica básica e validação do conceito de gestão para psicólogos.</p>
-          <span class="edition">Beta</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">2.0.0</span><span class="version-caption">Início da jornada</span></div>
+              <span class="version-badge">BETA</span>
+            </div>
+            <h3>Primeira linha beta pública</h3>
+            <p>Marco inicial da WorkMind PSI, com a proposta de concentrar organização clínica e evolução contínua em um só produto.</p>
+            <div class="version-foot"><span>Fase</span><strong>Validação inicial</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>2.1.0</h3>
-          <p>Expansão da base inicial com ajustes de fluxo, melhorias de navegação e refinamentos para tornar a rotina clínica mais estável e compreensível.</p>
-          <span class="edition">Beta</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">2.1.0</span><span class="version-caption">Estabilidade</span></div>
+              <span class="version-badge">BETA</span>
+            </div>
+            <h3>Refinamento da experiência beta</h3>
+            <p>Ajustes iniciais de usabilidade e consistência, preparando a ferramenta para uma experiência mais segura no uso diário.</p>
+            <div class="version-foot"><span>Foco</span><strong>Melhorias iniciais</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>2.2.0</h3>
-          <p>Encerramento do ciclo Beta com melhorias de usabilidade, correções importantes e preparação para a linha profissional da ferramenta.</p>
-          <span class="edition">Beta</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">2.2.0</span><span class="version-caption">Evolução contínua</span></div>
+              <span class="version-badge">BETA</span>
+            </div>
+            <h3>Consolidação da fase beta</h3>
+            <p>Ampliação da proposta original com mais robustez visual e funcional, abrindo caminho para a linha profissional.</p>
+            <div class="version-foot"><span>Marco</span><strong>Beta amadurecida</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>3.0.0</h3>
-          <p>Entrada da linha Pro, com proposta mais robusta para uso profissional, maior organização dos módulos e foco em produtividade clínica.</p>
-          <span class="edition">Pro</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">3.0.0</span><span class="version-caption">Entrada profissional</span></div>
+              <span class="version-badge">PRO</span>
+            </div>
+            <h3>Chegada da linha profissional</h3>
+            <p>A plataforma passa a assumir uma posição mais madura, com foco em rotina clínica profissional e apresentação mais sólida.</p>
+            <div class="version-foot"><span>Fase</span><strong>Expansão do produto</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>3.1.0</h3>
-          <p>Aprimoramento do fluxo profissional, com melhorias em cadastros, registros, navegação interna e consistência visual da experiência.</p>
-          <span class="edition">Pro</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">3.1.0</span><span class="version-caption">Crescimento</span></div>
+              <span class="version-badge">PRO</span>
+            </div>
+            <h3>Ampliação de módulos e ajustes</h3>
+            <p>Versão marcada por crescimento estrutural, correções importantes e expansão do valor percebido pelo profissional.</p>
+            <div class="version-foot"><span>Foco</span><strong>Módulos e consistência</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>3.2.0</h3>
-          <p>Fortalecimento da linha Pro, com ajustes de estabilidade, recursos de apoio e refinamentos para melhorar o uso contínuo da ferramenta.</p>
-          <span class="edition">Pro</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">3.2.0</span><span class="version-caption">Continuidade</span></div>
+              <span class="version-badge">PRO</span>
+            </div>
+            <h3>Refinamento da linha profissional</h3>
+            <p>Pequenos avanços de estabilidade e usabilidade que fortaleceram a base para a futura linha premium.</p>
+            <div class="version-foot"><span>Marco</span><strong>Base consolidada</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>4.0.0</h3>
-          <p>Início da linha Pro Premium, com visual mais sofisticado, maior maturidade operacional e foco em uma experiência clínica mais completa.</p>
-          <span class="edition">Pro Premium</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">4.0.0</span><span class="version-caption">Nova etapa</span></div>
+              <span class="version-badge">PRO PREMIUM</span>
+            </div>
+            <h3>Entrada oficial da linha premium</h3>
+            <p>Uma virada de posicionamento, com foco em maior sofisticação, experiência mais completa e percepção premium do produto.</p>
+            <div class="version-foot"><span>Fase</span><strong>Reposicionamento</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>4.1.0</h3>
-          <p>Refinamentos de interface, melhorias de organização e avanços na experiência premium para facilitar a rotina de atendimento e documentação.</p>
-          <span class="edition">Pro Premium</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">4.1.0</span><span class="version-caption">Rotina clínica</span></div>
+              <span class="version-badge">PRO PREMIUM</span>
+            </div>
+            <h3>Melhorias para o fluxo do profissional</h3>
+            <p>Avanços que fortaleceram o uso contínuo da plataforma na prática clínica, com foco em organização e produtividade.</p>
+            <div class="version-foot"><span>Foco</span><strong>Experiência de uso</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>4.2.0</h3>
-          <p>Melhorias e correções da linha Premium, com foco em estabilidade, fluidez e consolidação dos recursos clínicos disponíveis.</p>
-          <span class="edition">Pro Premium</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">4.2.0</span><span class="version-caption">Refinamento</span></div>
+              <span class="version-badge">PRO PREMIUM</span>
+            </div>
+            <h3>Refinamentos gerais da plataforma</h3>
+            <p>Melhorias incrementais que elevaram a consistência do produto e prepararam o terreno para a versão estável atual.</p>
+            <div class="version-foot"><span>Marco</span><strong>Polimento premium</strong></div>
+          </div>
         </article>
 
         <article class="version-card">
-          <h3>4.3.0</h3>
-          <p>Versão Pro Premium estável atual, com melhorias gerais, correções, reforço na experiência de instalação e preparação para o ciclo Ultimate 5.0.0.</p>
-          <span class="edition">Pro Premium</span>
+          <div class="version-card-body">
+            <div class="version-top">
+              <div><span class="version-number">4.3.0</span><span class="version-caption">Versão atual</span></div>
+              <span class="version-badge">PRO PREMIUM</span>
+            </div>
+            <h3>Versão estável oficial</h3>
+            <p>A versão atual da WorkMind PSI consolida a experiência premium e sustenta a transição para a futura Ultimate 5.0.0.</p>
+            <div class="version-foot"><span>Status</span><strong>Estável e disponível</strong></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="instalacao">
-      <h2>Como instalar pela primeira vez.</h2>
-
-      <p>
-        Siga este passo a passo para instalar a WorkMind PSI com segurança no computador.
-      </p>
-
-      <div class="steps">
-        <article class="step">
-          <div>
-            <h3>Baixe o instalador</h3>
-            <p>Clique no botão “Baixar WorkMind PSI”, aceite os termos e aguarde o download do arquivo de instalação.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div>
-            <h3>Execute o arquivo baixado</h3>
-            <p>Abra o instalador no Windows. Se aparecer um aviso de segurança, confirme que deseja executar o arquivo baixado da página oficial.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div>
-            <h3>Finalize a instalação</h3>
-            <p>Siga as etapas do instalador até concluir. Depois, abra a WorkMind PSI pelo atalho criado no computador.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div>
-            <h3>Envie seu HWID para ativação</h3>
-            <p>Ao abrir a WorkMind PSI pela primeira vez, copie o HWID exibido na tela de ativação e envie para workmindglobal@gmail.com. Aguarde o retorno com sua licença e as orientações de acesso.</p>
-          </div>
-        </article>
-
-        <article class="step">
-          <div>
-            <h3>Ative sua licença</h3>
-            <p>Após receber a licença por e-mail, abra a WorkMind PSI novamente, informe a chave de ativação e o e-mail nos campos solicitados, conclua o acesso e marque a opção de lembrar licença.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="notice">
-        Se você já usa a WorkMind PSI, feche o sistema antes de instalar uma nova versão. Isso evita conflitos durante a atualização.
-      </div>
-    </section>
-
-    <section class="section" id="suporte">
-      <h2>Suporte e orientações.</h2>
-
-      <p>
-        Em caso de dúvida na instalação, licença ou atualização, entre em contato com o suporte oficial da WorkMind Global. Informe seu nome, e-mail de ativação, versão instalada, HWID e uma breve descrição do problema.
-      </p>
-
-      <div class="actions">
-
-        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=workmindglobal@gmail.com&su=Suporte%20WorkMind%20PSI&body=Ol%C3%A1,%20preciso%20de%20suporte%20com%20a%20WorkMind%20PSI.%0A%0AMeu%20nome:%20%0AE-mail%20de%20ativa%C3%A7%C3%A3o:%20%0AVers%C3%A3o%20instalada:%20%0AHWID:%20%0ADescreva%20o%20problema:%20%0A%0AObrigado.">
-          Falar com suporte
-        </a>
-
-        <a class="btn btn-outline" href="#termos-download">
-          Voltar aos termos e download
-        </a>
-      </div>
-    </section>
-
-<footer class="footer">
-  WorkMind PSI, uma solução WorkMind Global.<br />
-  © 2026 WorkMind Global. Todos os direitos reservados.
-
-  <div class="footer-legal-links">
-    <a href="politica-de-privacidade.html">Política de Privacidade</a>
-    <span>•</span>
-    <a href="termos-de-uso.html">Termos de Uso</a>
-  </div>
-</footer>
-  </div>
-
+  </main>
+  <footer class="footer shell"><strong>WorkMind Global</strong><br>WorkMind PSI, plataforma de apoio à gestão clínica profissional.<div class="footer-legal-links"><a href="politica-de-privacidade.html">Política de Privacidade</a><span>•</span><a href="termos-de-uso.html">Termos de Uso</a><span>•</span><a href="mailto:workmindglobal@gmail.com">Suporte</a></div></footer>
   <script>
     const WORKMIND_DOWNLOAD_URL = "https://github.com/macswellisonpsic-droid/workmind-updates/releases/latest/download/WorkMindPSI_Setup.exe";
     const SUPPORT_EMAIL = "workmindglobal@gmail.com";
@@ -1617,17 +715,28 @@
       renderPlansPreview();
     }
 
-    function setStep(step) {
-      state.step = step;
+function setStep(step, shouldScroll) {
+  state.step = step;
 
-      document.querySelectorAll("[data-step]").forEach(function(el) {
-        el.classList.toggle("active", Number(el.dataset.step) === step);
-      });
+  document.querySelectorAll("[data-step]").forEach(function(el) {
+    el.classList.toggle("active", Number(el.dataset.step) === step);
+  });
 
-      document.querySelectorAll("[data-step-indicator]").forEach(function(el) {
-        el.classList.toggle("active", Number(el.dataset.stepIndicator) === step);
+  document.querySelectorAll("[data-step-indicator]").forEach(function(el) {
+    el.classList.toggle("active", Number(el.dataset.stepIndicator) === step);
+  });
+
+  if (shouldScroll !== false) {
+    const licenseSection = document.getElementById("licenca");
+
+    if (licenseSection) {
+      licenseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       });
     }
+  }
+}
 
     function updateSummary() {
       const profileMap = {
@@ -1684,18 +793,80 @@
       }
     }
 
-    function planCard(plan, forCheckout) {
+        function planCard(plan, forCheckout) {
       const price = currentPrice(plan);
-      const betaChip = "";
       const dataAttr = forCheckout ? ' data-plan-id="' + plan.id + '"' : "";
       const asButtonAttrs = forCheckout ? ' role="button" tabindex="0"' : "";
+      const recommended = ["anual", "semestral", "premium-clinica", "enterprise", "teste_gratis_7_dias"].includes(plan.id);
+
+      let subtitle = "";
+      let emphasis = "";
+      let points = [];
+
+      if (plan.profile === "profissional") {
+        subtitle = "Licença individual para psicólogo";
+        points = [
+          "Ativação vinculada ao e-mail e ao HWID informado",
+          "Uso profissional com acesso à linha Pro Premium",
+          "Ideal para rotina clínica com organização contínua"
+        ];
+        emphasis = plan.id === "anual"
+          ? "Melhor escolha para quem deseja continuidade, menos renovações e visão de investimento anual."
+          : plan.id === "semestral"
+          ? "Excelente equilíbrio entre permanência, estabilidade e compromisso financeiro."
+          : "Opção flexível para começar ou renovar com mais liberdade.";
+      } else if (plan.profile === "clinica") {
+        subtitle = "Licença institucional para clínicas";
+        points = [
+          "Estrutura pensada para equipes e operação compartilhada",
+          "Faixa definida conforme quantidade de psicólogos",
+          "Mais previsibilidade para expansão da clínica"
+        ];
+        emphasis = "Plano indicado para operação estruturada, com posicionamento mais profissional da clínica.";
+      } else if (plan.profile === "teste") {
+        subtitle = "Demonstração controlada";
+        points = [
+          "Liberação gratuita por 7 dias, mediante análise",
+          "Vinculação ao e-mail e ao HWID informado",
+          "Ideal para conhecer a proposta antes da contratação"
+        ];
+        emphasis = "Perfeito para experimentar a WorkMind PSI antes de contratar uma licença oficial.";
+      } else {
+        subtitle = "Solução personalizada";
+        points = [
+          "Condições adaptadas para clínicas maiores",
+          "Atendimento sob consulta e necessidade específica",
+          "Ideal para operação com mais de 6 profissionais"
+        ];
+        emphasis = "Recomendado quando a estrutura exige uma negociação personalizada e mais estratégica.";
+      }
+
       return `
-        <article class="plan-card${state.plan && state.plan.id === plan.id && forCheckout ? " active" : ""}"${dataAttr}${asButtonAttrs}>
-          <span class="plan-tag">${plan.tag}</span>
-          <h3>${plan.name}</h3>
-          <div class="price">${brl(price)} ${price !== null && Number(price) > 0 ? "<small>" + plan.duration + "</small>" : ""}</div>
-          ${betaChip}
-          <p>${plan.description}</p>
+        <article class="plan-card${state.plan && state.plan.id === plan.id && forCheckout ? " active" : ""}${recommended ? " recommended" : ""}"${dataAttr}${asButtonAttrs}>
+          <div class="plan-card-body">
+            <div class="plan-top">
+              <span class="plan-tag">${plan.tag}</span>
+              ${recommended ? '<span class="plan-badge">Destaque</span>' : '<span class="plan-badge">Oficial</span>'}
+            </div>
+
+            <h3>${plan.name}</h3>
+            <div class="plan-subtitle">${subtitle}</div>
+
+            <div class="price">${brl(price)} ${price !== null && Number(price) > 0 ? "<small>" + plan.duration + "</small>" : plan.duration ? "<small>" + plan.duration + "</small>" : ""}</div>
+
+            <p>${plan.description}</p>
+
+            <ul class="plan-points">
+              ${points.map(function(item){ return "<li>" + item + "</li>"; }).join("")}
+            </ul>
+
+            <div class="plan-emphasis">${emphasis}</div>
+
+            <div class="plan-foot">
+              <span>${forCheckout ? "Seleção" : "Modalidade"}</span>
+              <strong>${forCheckout ? "Clique para escolher" : plan.profile === "clinica" ? "Clínicas e equipes" : plan.profile === "profissional" ? "Profissional individual" : plan.profile === "teste" ? "Teste de demonstração" : "Sob consulta"}</strong>
+            </div>
+          </div>
         </article>
       `;
     }
@@ -1792,15 +963,33 @@
 
         updateSummary();
         renderCheckoutPlans();
-        setStep(3);
+        setStep(3, true);
       });
     });
 
     document.querySelectorAll("[data-back-step]").forEach(function(btn) {
       btn.addEventListener("click", function() {
-        setStep(Number(btn.dataset.backStep));
+        setStep(Number(btn.dataset.backStep), true);
       });
     });
+
+    const activationBackBtn = document.getElementById("activation-back-btn");
+
+if (activationBackBtn) {
+  activationBackBtn.addEventListener("click", function() {
+    if (state.profile === "teste") {
+      state.profile = "";
+      state.plan = null;
+      setStep(1, true);
+      updateSummary();
+      updateCheckoutContext();
+      syncPixVisibility();
+      return;
+    }
+
+    setStep(3, true);
+  });
+}
 
 
     const paymentSelect = document.getElementById("form-payment");
@@ -1934,7 +1123,7 @@ if (licenseForm) {
 
     if (!state.plan) {
       alert("Escolha um plano antes de finalizar.");
-      setStep(3);
+      setStep(3, true);
       return;
     }
 
@@ -2064,5 +1253,6 @@ if (licenseForm) {
     updateSummary();
     syncPixVisibility();
   </script>
+
 </body>
 </html>
